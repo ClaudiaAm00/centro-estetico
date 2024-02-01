@@ -61,9 +61,27 @@
     text-align: center;
 }
 
+/* PAGINA DETTAGLIO */
+.menuDettaglio{
+    margin-left: 1300px;
+    padding: 5px 50px  !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.imgCard{
+    max-width: 320px;
+    width: 100%;
+}
+
 @media screen and (max-width:990px){
     .menu a {
         padding: 0px 0px !important;
         margin: 5px 5px;
+    }
+    
+     .menuDettaglio {
+        padding: 0px 0px !important;
+        margin: 10px 10px;
     }
 }
