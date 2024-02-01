@@ -21,7 +21,7 @@ public class FormPrestazioniController
 	@GetMapping
 	public String getPage()
 	{
-		return "formpersonale";
+		return "formprestazione";
 	}
 	
 	@PostMapping("/aggiungiprestazione")
