@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table(name="amministrazione")
@@ -16,9 +17,11 @@ public class Amministrazione {
 	private int id;
 	
 	@Column
+	@Pattern(regexp = "[a-zA-z0-9.]{1,20}", message = "Caratteri non ammessi per lo username")
 	private String username;
 	
 	@Column
+	@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,20}", message ="Password troppo debole")
 	private String password;
 	
 	//incapsulamento
