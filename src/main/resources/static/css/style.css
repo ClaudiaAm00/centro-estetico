@@ -40,6 +40,18 @@
     background-blend-mode: multiply ;
 }
 
+/* SEZIONE HEADER PAGINA DETTAGLIO */
+.headerDettaglio{
+    background-color: #959595;
+    height: 700px;
+    padding-top: 8rem;
+    padding-bottom: 8rem ;
+    background-image: url('/images/imgstaff.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply ;
+}
+
 /* SEZIONE STAFF */
 .staffSection .imgStaff{
     min-height: 30rem;  
