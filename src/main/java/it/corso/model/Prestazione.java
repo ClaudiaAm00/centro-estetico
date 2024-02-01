@@ -17,6 +17,9 @@ public class Prestazione
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name="categoria")
+	private String categoria;
+	
 	@Column(name="tipologia")
 	private String tipologia;
 	
@@ -39,6 +42,12 @@ public class Prestazione
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 	public String getTipologia() {
 		return tipologia;
