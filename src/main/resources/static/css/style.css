@@ -1,0 +1,69 @@
+/* GOOGLE FONTS */
+*{
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar{
+    position: fixed !important;
+    /* height: 100px; */
+    width: 100%;
+    z-index:1;
+
+}
+
+.titolo{
+    font-size: 28px !important;
+    margin-left: 10px;
+}
+
+.menu a{
+    margin-left: 80px;
+    padding: 5px 50px  !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* SEZIONE HEADER */
+.head-banner{
+    background-color: #959595;
+    height: 700px;
+    padding-top: 8rem;
+    padding-bottom: 8rem ;
+    background-image: url('/images/salone.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply ;
+}
+
+/* SEZIONE STAFF */
+.staffSection .imgStaff{
+    min-height: 30rem;  
+    background-size: cover;
+    background-position: center;
+}
+
+/* MAPPA GOOGLE */
+.mappa{
+    width: 100%;
+    min-height: 500px;
+    margin-top: 80px;
+    
+  }
+
+/* FOOTER */
+.footer ul{
+    list-style: none;
+    text-align: center;
+}
+
+@media screen and (max-width:990px){
+    .menu a {
+        padding: 0px 0px !important;
+        margin: 5px 5px;
+    }
+}
