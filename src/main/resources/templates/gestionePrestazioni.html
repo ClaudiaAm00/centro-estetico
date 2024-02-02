@@ -16,15 +16,20 @@
 
         <!-- NavBar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand titolo" th:href="@{/}">US - Unique Souls</a>
+          <div class="container-fluid navCustom">
+            <a class="navbar-brand titolo" th:href="@{/}">Unique Souls</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav menuDettaglio">
                 <li class="nav-item">
-                  <a class="nav-link riservata" th:href="@{/areariservata}">Area Riservata</a>
+                  <a class="nav-link riservata" th:href="@{/}">Home</a>
+                  <!-- inserire il link per tornare all'area riservata -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link riservata" th:href="@{/areariservata}">Area riservata</a>
+                  <!-- inserire il link per tornare all'area riservata -->
                 </li>
               </ul>
             </div>
@@ -32,38 +37,31 @@
       </nav>
 
         <!-- Header-->
-        <header class="areaRiservata text-center mt-5">
-          <h1 class="fw-bolder">GESTIONE SERVIZI</h1>
-          <br>
+        <header class="areaRiservata text-center">
+          <h1>GESTIONE SERVIZI</h1>
+          <a class="link-offset-3 mt-3" th:href="@{/formprestazioni}">Aggiungi servizio</a>
         </header>
-    
-    
+  
     <!--SEZIONE PER LA GESTIONE PRESTAZIONI-->
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
-        <div class="col-12 gestionePrestazioni">
-
-
-          
-            <div class="card mb-4">
-                <div class="card-header">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header gestionePrestazioni text-center">
                     <i class="fas fa-table me-1"></i>
-                    Servizi/Prestazioni
-                    <i class="fas fa-table me-1"></i>
-                    <a th:href="@{/formprestazioni}">
-		            	<button type="button" class="btn btn-primary">Aggiungi Servizio</button>
-		            </a>
                 </div>
                 
-                <div class="card-body">
-                    <table id="datatablesSimple" class="table">
+                <div class="card-body ">
+                  <div class="table-responsive">
+                    <table  class="table">
                         <thead>
                             <tr>
                                 <th>TIPOLOGIA</th>
                                 <th>DESCRIZIONE</th>
                                 <th>CATEGORIA</th>
                                 <th>PREZZO</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,7 +71,7 @@
                                 <td>Descrizione</td>
                                 <td>Hair</td>
                                 <td>20.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
     
@@ -82,7 +80,7 @@
                                 <td>Descrizione</td>
                                 <td>Beauty</td>
                                 <td>20.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
     
@@ -91,7 +89,7 @@
                                 <td>Descrizione</td>
                                 <td>Hair</td>
                                 <td>30.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
                         
@@ -100,7 +98,7 @@
                                 <td>Descrizione</td>
                                 <td>Beauty</td>
                                 <td>40.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
     
@@ -109,7 +107,7 @@
                                 <td>Descrizione</td>
                                 <td>Hair</td>
                                 <td>50.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
     
@@ -118,66 +116,36 @@
                                 <td>Descrizione</td>
                                 <td>Beauty</td>
                                 <td>60.00E</td>
-                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                <td class="text-center"><button type="button" class="btn btnElimina">Elimina</button></td>
                                 
                             </tr>
     
                         </tbody>
                     </table>
+                  </div>
                 </div>
             </div>
         </div>
 
-
-
-
-
       </div>
-
 
     </div>
 
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <footer class="ftAreaPersonale">
+      <div class="container">
+        <div class="row text-center">
+            <div class="col-md-8 mb-3 mb-md-0 mx-auto">
+                <address>Copyright ©2024. All Rights Reserved.</address>
+            </div>
+        </div>
+    </div>
+    </footer>
 
     <!--PARTE FINALE-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
+
+      
+
+

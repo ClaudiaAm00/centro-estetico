@@ -1,11 +1,17 @@
 /* GOOGLE FONTS */
+body{
+    background-color: #f7f6f0 !important;
+}
+
 *{
     font-family: 'Comfortaa', sans-serif;
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Nanum Gothic', sans-serif;
     margin: 0;
     padding: 0;
+    
 }
+
 
 /* NAVBAR */
 .navbar{
@@ -18,7 +24,7 @@
 }
 
 .navCustom{
-    background-color: rgb(242, 242, 242) !important;
+    background-color: #F1F0E8 !important;
     color: rgb(49, 49, 49);
 }
 
@@ -32,10 +38,10 @@
 }
 
 .menu a{
-    margin-left: 80px;
+    margin-left: 70px;
     padding: 5px 50px  !important;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -86,7 +92,7 @@
 
 /* PAGINA DETTAGLIO */
 .menuDettaglio{
-    margin-left: 1300px;
+    margin-left: 1000px;
     padding: 5px 50px  !important;
     font-weight: bold;
     font-size: 18px;
@@ -97,14 +103,86 @@
     width: 100%;
 }
 
+/* Pagina area gestione personale */
+.bg-card{
+background-color: #016A70;
+color: white !important;
+/* aggiungere un bordo colorato */
+}
+
+.titoloAreaPersonale{
+    margin-top: 150px;
+}
+
+.titoloAreaPersonale > a {
+    text-decoration: none !important;
+    color: #016A70;
+}
+
+.immagineProfilo{
+    border-radius: 50%;
+/* aggiungere un bordo colorato */
+}
+
+.ftAreaPersonale{
+    margin-top: 200px;   
+    background-color:  #F1F0E8;
+}
+
+/* pagina servizi */
+.areaRiservata{
+    margin-top: 150px;
+}
+
+.areaRiservata a {
+    text-decoration: none;
+    color: #016A70;
+}
+
+.gestionePrestazioni{
+    background-color: #016A70 !important;
+    
+}
+
+.gestionePrestazioni a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 1000px;
+}
+
+.gestionePrestazioni a:hover{
+    color: rgb(230, 230, 230);
+}
+
+.btnElimina{
+    background-color: #016A70 !important;
+    color: white !important;
+   
+}
+
+.btnElimina:hover{
+    color: rgb(239, 239, 239) !important; 
+}
+
+
+
+
 @media screen and (max-width:990px){
     .menu a {
         padding: 0px 0px !important;
         margin: 5px 5px;
     }
-    
-     .menuDettaglio {
+
+    .menuDettaglio {
         padding: 0px 0px !important;
         margin: 10px 10px;
     }
+
+    .gestionePrestazioni a{
+        padding: 0px 0px !important;
+        margin: 5px 5px;
+    }
+
+
 }
