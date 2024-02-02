@@ -3,132 +3,138 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestione prestazioni</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Gestione Prestazioni</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- GOOGLE FONTS: -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Fira+Sans:wght@300;400;500&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  
+    <body>
 
-    <!--LA NAVBAR-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">...</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">...</a>
-              </li>
-            </ul>
+        <!-- NavBar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand titolo" href="/index.html">US - Unique Souls</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav menuDettaglio">
+                <li class="nav-item">
+                  <a class="nav-link riservata" href="#">Area riservata</a>
+                  <!-- inserire il link per tornare all'area riservata -->
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
       </nav>
 
-    <!--TITOLO-->
-    <header>
-    <h1 class="text-center">GESTIONE SERVIZI</h1>
-    </header>
+        <!-- Header-->
+        <header class="areaRiservata text-center mt-5">
+          <h1 class="fw-bolder">GESTIONE SERVIZI</h1>
+          <p><a class="link-offset-3" href="areaRiservata.html">Torna indietro</a></p>
+        </header>
     
     
     <!--SEZIONE PER LA GESTIONE PRESTAZIONI-->
 
-    <!--CONTENITORE PER LA GESTIONE PRESTAZIONI-->
-
-      
-
-
+    <div class="container">
+      <div class="row">
+        <div class="col-12 gestionePrestazioni">
 
 
-
-
-      <div class="card text-center">
-        <div class="card-header">
-          <ul class="nav nav-pills card-header-pills">
-            <li class="nav-item">
-              <h5>SERVIZI/PRESTAZIONI</h5>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body">
-          <button type="button" class="btn btn-primary btn-sm">Aggiungi Servizio</button>
-        </div>
-
-
-
-
-        <div class="gestionePrestazioni">
-          <table>
-            <thead>
-              <tr>
-                <th>Tipologia</th>
-                <th>Descrizione</th>
-                <th>Prezzo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Righe delle prestazioni -->
-              <tr>
-                <td>Servizio 1</td>
-                <td>Descrizione Prestazione 1</td>
-                <td>€20.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
-              <tr>
-                <td>Servizio 2</td>
-                <td>Descrizione Prestazione 2</td>
-                <td>€30.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
-              <tr>
-                <td>Servizio 3</td>
-                <td>Descrizione Prestazione 3</td>
-                <td>€30.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
-              <tr>
-                <td>Servizio 4</td>
-                <td>Descrizione Prestazione 4</td>
-                <td>€30.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
-              <tr>
-                <td>Servizio 5</td>
-                <td>Descrizione Prestazione 5</td>
-                <td>€30.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
-              <tr>
-                <td>Servizio 6</td>
-                <td>Descrizione Prestazione 6</td>
-                <td>€30.00</td>
-                <td><a href="#" class="btn btn-primary">Elimina</a></td>
-              </tr>
+          
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    Servizi/Prestazioni
+                    <i class="fas fa-table me-1"></i>
+                    <button type="button" class="btn btn-primary btn-sm">Aggiungi Servizio</button>
+                </div>
+                
+                <div class="card-body">
+                    <table id="datatablesSimple" class="table">
+                        <thead>
+                            <tr>
+                                <th>TIPOLOGIA</th>
+                                <th>DESCRIZIONE</th>
+                                <th>CATEGORIA</th>
+                                <th>PREZZO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
     
-            </tbody>
-          </table>
+                            <tr>
+                                <td>Servizio 1</td>
+                                <td>Descrizione</td>
+                                <td>Hair</td>
+                                <td>20.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+    
+                            <tr>
+                                <td>Servizio 2</td>
+                                <td>Descrizione</td>
+                                <td>Beauty</td>
+                                <td>20.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+    
+                            <tr>
+                                <td>Servizio 3</td>
+                                <td>Descrizione</td>
+                                <td>Hair</td>
+                                <td>30.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td>Servizio 4</td>
+                                <td>Descrizione</td>
+                                <td>Beauty</td>
+                                <td>40.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+    
+                            <tr>
+                                <td>Servizio 5</td>
+                                <td>Descrizione</td>
+                                <td>Hair</td>
+                                <td>50.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+    
+                            <tr>
+                                <td>Servizio 6</td>
+                                <td>Descrizione</td>
+                                <td>Beauty</td>
+                                <td>60.00E</td>
+                                <td><button type="button" class="btn btn-danger">Elimina</button></td>
+                                
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
-
-
-
-
-
-
-
 
 
 
 
 
       </div>
+
+
+    </div>
 
 
       
