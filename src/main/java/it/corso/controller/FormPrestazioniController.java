@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import it.corso.model.Prestazione;
 import it.corso.model.Staff;
 import it.corso.service.PrestazioneService;
+import jakarta.servlet.http.HttpSession;
 
 
 //localhost:8080/formprestazioni
@@ -19,8 +20,10 @@ public class FormPrestazioniController
 	private PrestazioneService prestazioneService;
 	
 	@GetMapping
-	public String getPage()
+	public String getPage(HttpSession session)
 	{
+		if(session.getAttribute("amministratore") == null)
+			return "redirect:/login";
 		return "formprestazioni";
 	}
 	

@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import it.corso.model.Staff;
 import it.corso.service.StaffService;
+import jakarta.servlet.http.HttpSession;
 
 //localhost:8080/formpersonale
 @Controller
@@ -22,8 +23,10 @@ public class FormPersonaleController
 	private StaffService staffService;
 	
 	@GetMapping
-	public String getPage()
+	public String getPage(HttpSession session)
 	{
+		if(session.getAttribute("amministratore") == null)
+			return "redirect:/login";
 		return "formpersonale";
 	}
 	
