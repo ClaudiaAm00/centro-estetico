@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestione Prestazioni</title>
+    <title>Area Riservata</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <!-- GOOGLE FONTS: -->
@@ -17,12 +17,13 @@
         <!-- NavBar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand titolo" href="/index.html">US - Unique Souls</a>
+            <a class="navbar-brand titolo" th:href="@{/}">US - Unique Souls</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav menuDettaglio">
+        <!-- questo è un refuso da un'altra pagina? perchè siamo già su area riservata -->
                 <li class="nav-item">
                   <a class="nav-link riservata" href="#">Area riservata</a>
                   <!-- inserire il link per tornare all'area riservata -->
@@ -35,7 +36,7 @@
         <!-- Header-->
         <header class="areaRiservata text-center mt-5">
           <h1 class="fw-bolder">AREA RISERVATA</h1>
-          <p><a class="link-offset-3" href="index.html">Home</a></p>
+          <p><a class="link-offset-3" th:href="@{/}">Home</a></p>
         </header>
 
 
@@ -54,8 +55,8 @@
                       Scegli opzioni
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Mostra lista servizi</a></li>
-                      <li><a class="dropdown-item" href="#">Aggiungi servizi</a></li>
+                      <li><a class="dropdown-item" th:href="@{/gestioneprestazioni}">Mostra lista servizi</a></li>
+                      <li><a class="dropdown-item" th:href="@{/formprestazioni}">Aggiungi servizi</a></li>
                     </ul>
                   </div>
       
@@ -74,8 +75,8 @@
                       Scegli opzioni
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Mostra lista personale</a></li>
-                      <li><a class="dropdown-item" href="#">Aggiungi personale</a></li>
+                      <li><a class="dropdown-item" th:href="@{/gestionepersonale}">Mostra lista personale</a></li>
+                      <li><a class="dropdown-item" th:href="@{/formpersonale}">Aggiungi personale</a></li>
                     </ul>
                   </div>
       
