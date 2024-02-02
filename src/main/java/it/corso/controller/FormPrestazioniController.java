@@ -21,7 +21,7 @@ public class FormPrestazioniController
 	@GetMapping
 	public String getPage()
 	{
-		return "formprestazione";
+		return "formprestazioni";
 	}
 	
 	@PostMapping("/aggiungiprestazione")
@@ -29,15 +29,22 @@ public class FormPrestazioniController
 			@RequestParam("tipologia") String tipologia,
 			@RequestParam("descrizione") String descrizione,
 			@RequestParam("prezzo") double prezzo,
-			@RequestParam("staff") Staff staff)
+			@RequestParam("categoria") String categoria)
+		//	@RequestParam("staff") Staff staff)
 	{
 		Prestazione prestazione = new Prestazione();
 		prestazione.setTipologia(tipologia);
 		prestazione.setDescrizione(descrizione);
 		prestazione.setPrezzo(prezzo);
-		prestazione.setStaff(staff);
+		prestazione.setCategoria(categoria);
+	//	prestazione.setStaff(staff);
 		
 		prestazioneService.registraPrestazione(prestazione);
 		return "redirect:/";  
 	} 
 }
+
+
+
+
+

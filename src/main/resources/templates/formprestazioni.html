@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +20,14 @@
   <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand titolo" href="/index.html">US - Unique Souls</a>
+          <a class="navbar-brand titolo" th:href="@{/index}">US - Unique Souls</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav menuDettaglio">
               <li class="nav-item">
-                <a class="nav-link riservata" href="#">Area riservata</a>
+                <a class="nav-link riservata" th:href="@{/areariservata}">Area riservata</a>
                 <!-- inserire il link per tornare all'area riservata -->
               </li>
             </ul>
@@ -43,29 +43,34 @@
             
             <h2>Registra un nuovo servizio</h2>
             <br>
-            <button type="button" class="btn btn-primary">Torna in Area riservata</button>
+            <button type="button" class="btn btn-primary" th:href="@{/areariservata}">Torna in Area riservata</button>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col-12 mb-5">
-            <form>
+            <form action="formprestazioni/aggiungiprestazione" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-label">Tipologia</label>
-                    <input name="tipologia" type="text" class="form-control" required>
+                <input name="tipologia" type="text" class="form-control" required> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Descrizione</label>
-                    <input name="descrizione" type="text" class="form-control" required>
+                  <input name="descrizione" type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                    <input name="number" type="text" class="form-control" required>
+                  <input name="prezzo" type="number" step="any" class="form-control" required>                   
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Categoria</label>
-                    <input name="text" type="text" class="form-control" required>
+                    <input name="categoria" type="text" class="form-control" required>
+                </div>              
+                                
+              <!--   <div class="mb-3">
+                    <label class="form-label">Staff</label>
+                    <input name="fk_id_staff" type="text" class="form-control">
                 </div>
-                
+                -->
                 <button type="submit" class="btn btn-primary">Registra</button>
               </form>
         </div>
