@@ -43,7 +43,7 @@ public class FormPrestazioniController
 	//	prestazione.setStaff(staff);
 		
 		prestazioneService.registraPrestazione(prestazione);
-		return "redirect:/";  
+		return "redirect:/gestioneprestazioni";  
 	} 
 }
 
