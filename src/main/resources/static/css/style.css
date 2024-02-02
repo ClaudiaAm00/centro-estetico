@@ -3,16 +3,27 @@
     font-family: 'Comfortaa', sans-serif;
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 /* NAVBAR */
 .navbar{
     position: fixed !important;
-    /* height: 100px; */
     width: 100%;
+    top:0 !important;
+    height: 60px;
+    line-height: 60px;
     z-index:1;
+}
 
+.navCustom{
+    background-color: rgb(242, 242, 242) !important;
+    color: rgb(49, 49, 49);
+}
+
+.navCustom a:hover {
+    color: black;
 }
 
 .titolo{
