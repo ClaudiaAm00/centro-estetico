@@ -22,9 +22,9 @@ public class GestionePrestazioniController {
 	
 	@GetMapping
 	public String getPage(Model model, HttpSession session){
-		// se non amministratore, ritorna all'home page
+		// se non amministratore, ritorna al login
 		if(session.getAttribute("amministratore") == null)
-			return "redirect:/";
+			return "redirect:/login";
 		
 		// se amministratore visualizza la pagina
 		List<Prestazione> prestazione = prestazioneService.getPrestazioni();

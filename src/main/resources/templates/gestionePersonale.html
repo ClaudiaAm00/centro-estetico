@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,15 +15,14 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
            <div class="container-fluid">
-             <a class="navbar-brand titolo" href="/index.html">US - Unique Souls</a>
+             <a class="navbar-brand titolo" th:href="@{/}">US - Unique Souls</a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav menuDettaglio">
                  <li class="nav-item">
-                   <a class="nav-link riservata" href="#">Area riservata</a>
-                   <!-- inserire il link per tornare all'area riservata -->
+                   <a class="nav-link riservata" th:href="@{/areariservata}">Area Riservata</a>
                  </li>
                </ul>
              </div>
@@ -32,13 +31,12 @@
        
     <header class="text-center">
         <h1 class="text-center mt-5"> Gestione del Personale </h1>
-        <a href="" >Registra dipendente</a>
         <br>
-        <a href=""> Torna in Home Page</a>
     </header>
     
     <section>
         <div class="container mt-5">
+        	
             <div class="row">
                 <div class="col-12 col-md-6 d-flex justify-content-center">
                     <img src="../static/images/Estetista-scaled.jpeg" class="immagineProfilo">
@@ -54,6 +52,12 @@
                           <h5 class="card-text">Telefono: </h5>
                         </div>
                       </div>
+                      
+                      <br>
+                      
+                     <a th:href="@{/formpersonale}">
+		            	<button type="button" class="btn btn-primary">Aggiungi Dipendente</button>
+		          	 </a>
                 </div>
             </div>
         </div>

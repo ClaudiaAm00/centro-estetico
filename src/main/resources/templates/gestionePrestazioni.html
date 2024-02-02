@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,15 +17,14 @@
         <!-- NavBar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand titolo" href="/index.html">US - Unique Souls</a>
+            <a class="navbar-brand titolo" th:href="@{/}">US - Unique Souls</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav menuDettaglio">
                 <li class="nav-item">
-                  <a class="nav-link riservata" href="#">Area riservata</a>
-                  <!-- inserire il link per tornare all'area riservata -->
+                  <a class="nav-link riservata" th:href="@{/areariservata}">Area Riservata</a>
                 </li>
               </ul>
             </div>
@@ -35,7 +34,7 @@
         <!-- Header-->
         <header class="areaRiservata text-center mt-5">
           <h1 class="fw-bolder">GESTIONE SERVIZI</h1>
-          <p><a class="link-offset-3" href="areaRiservata.html">Torna indietro</a></p>
+          <br>
         </header>
     
     
@@ -52,7 +51,9 @@
                     <i class="fas fa-table me-1"></i>
                     Servizi/Prestazioni
                     <i class="fas fa-table me-1"></i>
-                    <button type="button" class="btn btn-primary btn-sm">Aggiungi Servizio</button>
+                    <a th:href="@{/formprestazioni}">
+		            	<button type="button" class="btn btn-primary">Aggiungi Servizio</button>
+		            </a>
                 </div>
                 
                 <div class="card-body">
