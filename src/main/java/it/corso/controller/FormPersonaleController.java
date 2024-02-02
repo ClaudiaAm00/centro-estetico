@@ -47,6 +47,6 @@ public class FormPersonaleController
 		staff.setEmail(email);
 		staff.setTelefono(telefono);
 		staffService.registraStaff(staff, foto);
-		return "redirect:/";  
+		return "redirect:/gestionepersonale";  
 	} 
 }

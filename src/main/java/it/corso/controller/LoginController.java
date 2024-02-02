@@ -24,7 +24,7 @@ public class LoginController {
 		return "login";
 	}
 	
-	@PostMapping
+	@PostMapping("/verifica")
 	public String formManager(
 			@RequestParam("username") String username,
 			@RequestParam("password") String password,
@@ -32,7 +32,7 @@ public class LoginController {
 	{
 		if (!amministrazioneService.controlloLogin(username, password, session))
 			return "redirect:/login";
-		return "redirect:/riservata";
+		return "redirect:/areariservata";
 	}
 
 }
