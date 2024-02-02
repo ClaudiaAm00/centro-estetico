@@ -41,15 +41,12 @@ public class AmministrazioneServiceImpl implements AmministrazioneService {
 		List<Amministrazione> amministratori = getAmministrazioni();
 				
 		// li confronto con quello che è stato scritto nel login
-		if(session.getAttribute("amministratore") != null) {
-			for(Amministrazione p : amministratori) {
-				if(username.equalsIgnoreCase(p.getUsername()) && password.equals(p.getPassword() )) {
-					Amministrazione amministrazione = new Amministrazione();
-					session.setAttribute("amministratore", amministrazione);
-					return true;
-				}
+		for(Amministrazione p : amministratori) {
+			if(username.equalsIgnoreCase(p.getUsername()) && password.equals(p.getPassword() )) {
+				Amministrazione amministrazione = new Amministrazione();
+				session.setAttribute("amministratore", amministrazione);
+				return true;
 			}
-			
 		}
 		
 		return false;
