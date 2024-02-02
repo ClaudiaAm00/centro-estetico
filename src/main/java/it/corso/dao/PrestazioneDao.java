@@ -13,4 +13,11 @@ public interface PrestazioneDao extends CrudRepository<Prestazione, Integer>
 	@Query(value = "SELECT * FROM prestazione ORDER BY id=:p DESC LIMIT 5",	nativeQuery = true)
 	List<Prestazione> listaNuovePrestazioni(@Param("p") int id);
 	
+	// query hair
+	@Query(value = "SELECT * FROM prestazione WHERE categoria = 'hair'", nativeQuery = true)
+	List<Prestazione> trovaHair();
+	
+	// query beauty
+	@Query(value = "SELECT * FROM prestazione WHERE categoria = 'beauty'", nativeQuery = true)
+	List<Prestazione> trovaBeauty();
 }

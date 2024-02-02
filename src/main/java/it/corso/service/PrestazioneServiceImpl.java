@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import it.corso.dao.PrestazioneDao;
 import it.corso.model.Prestazione;
 
+
 @Service
 public class PrestazioneServiceImpl implements PrestazioneService {
 	
@@ -33,6 +34,21 @@ public class PrestazioneServiceImpl implements PrestazioneService {
 	public void cancellaPrestazione(Prestazione prestazione) 
 	{
 		prestazioneDao.delete(prestazione);
+	}
+
+	@Override
+	public List<Prestazione> listaNuovePrestazioni(int id) {
+		return prestazioneDao.listaNuovePrestazioni(id);
+	}
+
+	@Override
+	public List<Prestazione> trovaHair() {
+		return prestazioneDao.trovaHair();
+	}
+
+	@Override
+	public List<Prestazione> trovaBeauty() {
+		return prestazioneDao.trovaBeauty();
 	}
 
 }

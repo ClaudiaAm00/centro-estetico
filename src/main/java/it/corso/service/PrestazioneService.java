@@ -9,4 +9,8 @@ public interface PrestazioneService
 	Prestazione getPrestazioneById(int id);
 	List<Prestazione> getPrestazioni();
 	void cancellaPrestazione(Prestazione prestazione);
+	
+	List<Prestazione> listaNuovePrestazioni(int id);
+	List<Prestazione> trovaHair();
+	List<Prestazione> trovaBeauty();
 }
