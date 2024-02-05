@@ -1,7 +1,4 @@
 /* GOOGLE FONTS */
-body{
-    background-color: #f7f6f0 !important;
-}
 
 *{
     font-family: 'Comfortaa', sans-serif;
@@ -24,31 +21,35 @@ body{
 }
 
 .navCustom{
-    background-color: #F1F0E8 !important;
-    color: rgb(49, 49, 49);
+    background-color:#2e2e2e !important;
 }
 
 .navCustom a:hover {
-    color: black;
+    color: #505050 !important;
 }
 
 .titolo{
-    font-size: 28px !important;
-    margin-left: 10px;
+    font-size: 22px !important;
+    color: white !important;
 }
 
 .menu a{
-    margin-left: 70px;
+    color: white !important;
+    margin-left: 50px;
     padding: 5px 50px  !important;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
+}
+
+.menu a:hover{
+    color: #505050 !important;
 }
 
 
 /* SEZIONE HEADER */
 .head-banner{
     background-color: #959595;
-    height: 700px;
+    height: 500px;
     padding-top: 8rem;
     padding-bottom: 8rem ;
     background-image: url('/images/salone.jpg');
@@ -69,11 +70,50 @@ body{
     background-blend-mode: multiply ;
 }
 
+/* sezione ultime novità */
+.ultimeNovita{
+    background-color: #505050;
+}
+
+.ultimeNovita h5{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
 /* SEZIONE STAFF */
+.staffSection{
+    background-color: #505050;
+}
+
 .staffSection .imgStaff{
-    min-height: 30rem;  
+    min-height: 25rem; 
+    width: 27rem; 
     background-size: cover;
     background-position: center;
+    margin-top: 50px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgStaff:hover{
+    border: 5px solid white;
+}
+
+.infoStaff{
+    opacity: 0;
+    transition: opacity 0.4s;
+    color: white;
+    text-align: center;
+    
+}
+
+.infoStaff:hover{
+    opacity: 1;
+    
 }
 
 /* MAPPA GOOGLE */
@@ -84,7 +124,18 @@ body{
     
   }
 
-/* FOOTER */
+/* FOOTER homepage*/
+.footer{
+    background-color: #2e2e2e;
+    color: white;
+}
+.footer p{
+    font-size: 15px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
 .footer ul{
     list-style: none;
     text-align: center;
@@ -184,5 +235,8 @@ color: white !important;
         margin: 5px 5px;
     }
 
+    .staffSection .imgStaff{
+        margin-left: 0px;
+    }
 
 }

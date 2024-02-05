@@ -58,48 +58,27 @@
 <!--domanda: anche come per le card ci dovrebbe essere solo una slide e le altre si dovrebbero generare in automatico?-->
 
 <!-- Le immagini sono da mettere al centro e da cambiare naturalmente-->
-		<h2 class="text-center mt-3 mb-3">Le ultime novità</h2>
-		<div id="carouselExampleCaptions" class="carousel slide">
-  			<div class="carousel-indicators">
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  			</div>
-  			
-  			<div class="carousel-inner">
-    			<div class="carousel-item active">
-      			<img src="images/img2staff.jpg" class="d-block w-50" alt="...">
-      		<div class="carousel-caption d-none d-md-block">
-        		<h5 class="text-black">Ultime novità</h5>
-       		<p class="text-black">Some representative placeholder content for the first slide.</p>
-      		</div>
-    		</div>
-    	
-    		<div class="carousel-item">
-      			<img src="images/img2staff.jpg" class="d-block w-50" alt="...">
-     		<div class="carousel-caption d-none d-md-block">
-        		<h5 class="text-black">Ultime novità</h5>
-        		<p class="text-black">Some representative placeholder content for the second slide.</p>
-      		</div>
-    		</div>
-    		
-    		<div class="carousel-item">
-      			<img src="images/img2staff.jpg" class="d-block w-50" alt="...">
-      		<div class="carousel-caption d-none d-md-block">
-        		<h5 class="text-black">Ultime novità</h5>
-        		<p class="text-black">Some representative placeholder content for the third slide.</p>
-      		</div>
-    		</div>
-  		</div>
-		  	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Previous</span>
-		  	</button>
-		  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    <span class="visually-hidden">Next</span>
-		  	</button>
-	</div>
+		  <h2 class="mt-3 mb-3 fw-bold">Le ultime novità</h2>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide ultimeNovita" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h5 >Taglio visagistico</h5>
+        <img src="images/taglio.jpg" class=" w-75" alt="...">
+        <p></p>
+      </div>
+      <div class="carousel-item">
+        <h5 >Tinta naturale</h5>
+        <img src="images/tinta.jpg" class=" w-75" alt="...">  
+        <p></p>    
+      </div>
+      <div class="carousel-item">
+        <h5>Manicure</h5>
+        <img src="images/manicure.jpg" class="w-75" alt="..."> 
+        <p></p>       
+      </div>
+    </div>
+  </div>
 </section>
 
     <!-- SEZIONE PRESTAZIONI -->
@@ -202,8 +181,59 @@
     </section>
 
     <!-- SEZIONE STAFF -->
+ 
+    <h2 class="text-center mt-5 fw-bold">Il nostro staff</h2>
+
+    <!-- SEZIONE STAFF -->
     <section id="staff" class="staffSection">
       <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 imgStaff" style="background-image: url('/images/fotoStaff1.jpg');">
+            <div class="infoStaff">
+              <h4>Nome Cognome</h4>
+              <h5 >Parrucchiere</h5>
+            </div> 
+          </div>
+          <div class="col-12 col-md-4 imgStaff " style="background-image: url('/images/fotoStaff2.jpg');">
+            <div class="infoStaff">
+              <h4>Nome Cognome</h4>
+              <h5 >Parrucchiere</h5>
+            </div> 
+          </div>
+          <div class="col-12 col-md-4 imgStaff" style="background-image: url('/images/fotoStaff3.jpg');">
+            <div class="infoStaff">
+              <h4>Nome Cognome</h4>
+              <h5 >Parrucchiere</h5>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 imgStaff mb-5" style="background-image: url('/images/fotoStaff4.jpg');">
+          <div class="infoStaff">
+            <h4>Nome Cognome</h4>
+            <h5 >Parrucchiere</h5>
+          </div> 
+        </div>
+        <div class="col-12 col-md-4 imgStaff mb-5" style="background-image: url('/images/fotoStaff2.jpg');">
+          <div class="infoStaff">
+            <h4>Nome Cognome</h4>
+            <h5 >Parrucchiere</h5>
+          </div> 
+        </div>
+        <div class="col-12 col-md-4 imgStaff mb-5" style="background-image: url('/images/fotoStaff3.jpg');">
+          <div class="infoStaff">
+            <h4>Nome Cognome</h4>
+            <h5 >Parrucchiere</h5>
+          </div> 
+        </div>
+      </div>
+     
+      </div>
+      
+     <!-- <div class="container">
         <h2 class="text-center mt-5">Il nostro staff</h2>
 
         <div class="row no-gutters mt-5">
@@ -246,7 +276,7 @@
           </div>
         </div>
 
-      </div>
+      </div> --> 
       
     </section>
 
@@ -256,15 +286,16 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contatti" class="footer mt-5">
+    
+       <footer id="contatti" class="footer text-center mt-5">
       <div class="container">
         <div class="row">
 
-          <div class="col-md-6 col-lg-4 my-5">
+          <div class="col-12 col-lg-6 my-4">
             <div>
 
               <h3 class="text-center">CENTRO ESTETICO</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique officia sed, architecto sunt nihil? Velit neque porro rem amet, distinctio quam quia quisquam recusandae, temporibus ipsa vitae dolores voluptates!</p>
+              <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique officia sed, architecto sunt nihil? Velit neque porro rem amet, distinctio quam quia quisquam recusandae, temporibus ipsa vitae dolores voluptates!</p>
             </div>
 
             <div class="text-center">
@@ -273,26 +304,24 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
-            <!-- div vuoto per creare spazio tra le due colonne -->
-          </div>
+          
 
-          <div class="col-md-6 col-lg-4 my-5">
-            <h3 class="text-center">Contatti</h3>
+          <div class="col-12 col-lg-6 my-4">
+            <h3>Contatti</h3>
             <ul class="my-4">
-              <li>
-                <span class="mx-1"><i class="fa-solid fa-envelope"></i></span>
-                <a href="#">email</a>
+              <li class="ms-1">
+                <span ><i class="fa-solid fa-envelope"></i></span>
+                <a href="#">unique.soul@email.it</a>
               </li>
               <br>
-              <li>
-                <span class="mx-1"><i class="fa-solid fa-phone"></i></span>
-                <a href="#">telefono</a>
+              <li class="me-5">
+                <span ><i class="fa-solid fa-phone"></i></span>
+                <a href="#">1234567890</a>
               </li>
-             <br>
-              <li>
-                <span class="mx-1"><i class="fa-solid fa-location-dot"></i></span>          
-                <a href="#">indirizzo</a>
+              <br>
+              <li class="me-1">
+                <span><i class="fa-solid fa-location-dot"></i></span>          
+                <a href="#">via unique souls 34</a>
             </li>
             </ul>
           </div>
