@@ -11,4 +11,6 @@ public interface StaffService {
 	Staff getStaffById(int id);
 	List<Staff> getAllStaff();
 	void cancellaStaff(Staff staff);
+	
+	List<Staff> trovaStaffDispari();
 }

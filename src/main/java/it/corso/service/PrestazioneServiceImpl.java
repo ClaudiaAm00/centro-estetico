@@ -1,7 +1,10 @@
 package it.corso.service;
+import java.util.Base64;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
 import it.corso.dao.PrestazioneDao;
 import it.corso.model.Prestazione;
 
@@ -13,8 +16,22 @@ public class PrestazioneServiceImpl implements PrestazioneService {
 	private PrestazioneDao prestazioneDao;
 
 	@Override
-	public void registraPrestazione(Prestazione prestazione) 
+	public void registraPrestazione(Prestazione prestazione, MultipartFile foto) 
 	{
+		if(foto != null && !foto.isEmpty())
+		{
+			try 
+			{
+				String estensione = foto.getContentType();
+				System.out.println(estensione);
+				prestazione.setFoto("data:" + estensione + ";base64," + Base64.getEncoder().encodeToString(foto.getBytes()));
+
+			} catch (Exception e) 
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		
 		prestazioneDao.save(prestazione);
 	}
 

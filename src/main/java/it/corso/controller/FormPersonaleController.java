@@ -32,14 +32,14 @@ public class FormPersonaleController
 	
 	@PostMapping("/aggiungipersona")
 	public String formManager(
-			@RequestParam("nome") String nome,
-			@RequestParam("cognome") String cognome,
-			@RequestParam("ruolo") String ruolo,
+			@RequestParam(name = "nome") String nome,
+			@RequestParam(name = "cognome") String cognome,
+			@RequestParam(name = "ruolo") String ruolo,
 			@RequestParam(name = "foto", required = false) MultipartFile foto,
-			@RequestParam("dataAssunzione") LocalDate dataAssunzione,
-			@RequestParam("contratto") String contratto,
-			@RequestParam("email") String email,
-			@RequestParam("telefono") String telefono) 
+			@RequestParam(name = "dataAssunzione") LocalDate dataAssunzione,
+			@RequestParam(name = "contratto") String contratto,
+			@RequestParam(name = "email") String email,
+			@RequestParam(name = "telefono") String telefono) 
 	{
 		Staff staff = new Staff();
 		staff.setNome(nome);

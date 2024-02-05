@@ -29,6 +29,9 @@ public class Prestazione
 	@Column(name="prezzo")
 	private double prezzo;
 	
+	@Column
+	private String foto;
+	
 	//fk_id_staff
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "fk_id_staff", referencedColumnName = "id")
@@ -66,6 +69,12 @@ public class Prestazione
 	}
 	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
+	}
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 	public Staff getStaff() {
 		return staff;

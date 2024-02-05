@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
 import it.corso.model.Prestazione;
 import it.corso.model.Staff;
 import it.corso.service.PrestazioneService;
@@ -29,20 +31,20 @@ public class FormPrestazioniController
 	
 	@PostMapping("/aggiungiprestazione")
 	public String formManager(
-			@RequestParam("tipologia") String tipologia,
-			@RequestParam("descrizione") String descrizione,
-			@RequestParam("prezzo") double prezzo,
-			@RequestParam("categoria") String categoria)
-		//	@RequestParam("staff") Staff staff)
+			@RequestParam(name = "tipologia") String tipologia,
+			@RequestParam(name = "descrizione") String descrizione,
+			@RequestParam(name = "prezzo") double prezzo,
+			@RequestParam(name = "categoria") String categoria,
+			@RequestParam(name = "foto", required = false) MultipartFile foto,
+			@RequestParam(name = "staff", required = false) Staff staff)
 	{
 		Prestazione prestazione = new Prestazione();
 		prestazione.setTipologia(tipologia);
 		prestazione.setDescrizione(descrizione);
 		prestazione.setPrezzo(prezzo);
 		prestazione.setCategoria(categoria);
-	//	prestazione.setStaff(staff);
-		
-		prestazioneService.registraPrestazione(prestazione);
+		prestazione.setStaff(staff);
+		prestazioneService.registraPrestazione(prestazione, foto);
 		return "redirect:/gestioneprestazioni";  
 	} 
 }

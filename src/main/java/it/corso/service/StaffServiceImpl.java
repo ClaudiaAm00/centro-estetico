@@ -49,6 +49,11 @@ public class StaffServiceImpl implements StaffService {
 		staffDao.delete(staff);
 	}
 
+	@Override
+	public List<Staff> trovaStaffDispari() {
+		return staffDao.trovaStaffDispari();
+	}
+
 }
 
 
