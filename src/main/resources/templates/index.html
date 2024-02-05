@@ -11,16 +11,20 @@
      <!-- Font Awesome -->
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- GOOGLE FONTS: -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Fira+Sans:wght@300;400;500&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     
   </head>
   <body>
   <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid navCustom">
-          <a class="navbar-brand titolo" th:href="@{/}">Unique Souls</a>
+         <!--<a class="navbar-brand titolo" th:href="@{/}">Unique Souls</a>  --> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -51,31 +55,32 @@
       </nav>
 
     <header id="header" class="head-banner">
+    <h1 class="text-center text-white titoloh1">Unique Souls</h1>
     </header>
 
     <!-- SEZIONE ULTIME NOVITA' -->
-<section>
+<section class="text-center">
 <!--domanda: anche come per le card ci dovrebbe essere solo una slide e le altre si dovrebbero generare in automatico?-->
 
 <!-- Le immagini sono da mettere al centro e da cambiare naturalmente-->
-		  <h2 class="mt-3 mb-3 fw-bold">Le ultime novità</h2>
+ <h2 class="mt-5 mb-5">Le ultime novità</h2>
 
   <div id="carouselExampleSlidesOnly" class="carousel slide ultimeNovita" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <h5 >Taglio visagistico</h5>
+        <p class="mt-5"></p>
         <img src="images/taglio.jpg" class=" w-75" alt="...">
-        <p></p>
+        <h5 class="mb-3" >Taglio visagistico</h5>
       </div>
       <div class="carousel-item">
-        <h5 >Tinta naturale</h5>
+        <p class="mt-5"></p> 
         <img src="images/tinta.jpg" class=" w-75" alt="...">  
-        <p></p>    
+        <h5 class="mb-3">Tinta naturale</h5>
       </div>
       <div class="carousel-item">
-        <h5>Manicure</h5>
+        <p class="mt-5"></p>       
         <img src="images/manicure.jpg" class="w-75" alt="..."> 
-        <p></p>       
+        <h5 class="mb-3" >Manicure</h5>
       </div>
     </div>
   </div>
@@ -86,8 +91,9 @@
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h2>I nostri servizi</h2>
-          <h3>Hair</h3>
+          <h2 class="mb-5 fs-1 fw-bold">I nostri servizi</h2>
+          <h3 class="fw-bold fs-2">Hair</h3>
+          <div class="linea"></div>
 
           <div class="col-lg-4">
 
@@ -136,7 +142,8 @@
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h3>Beauty</h3>
+          <h3 class="fw-bold fs-2 mt-5">Beauty</h3>
+          <div class="linea"></div>
 
           <div class="col-lg-4">
             <div class="card mt-5" th:each="p : ${beauty}">
@@ -180,13 +187,11 @@
       </div>
     </section>
 
-    <!-- SEZIONE STAFF -->
- 
-    <h2 class="text-center mt-5 fw-bold">Il nostro staff</h2>
-
-    <!-- SEZIONE STAFF -->
-    <section id="staff" class="staffSection">
+    
+    <!-- SEZIONE STAFF --> 
+   <section id="staff" class="staffSection mt-5">
       <div class="container">
+    <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
         <div class="row">
           <div class="col-12 col-md-4 imgStaff" style="background-image: url('/images/fotoStaff1.jpg');">
             <div class="infoStaff">
@@ -287,15 +292,26 @@
 
     <!-- FOOTER -->
     
-       <footer id="contatti" class="footer text-center mt-5">
+     <footer id="contatti" class="footer text-center mt-5">
       <div class="container">
         <div class="row">
+          <div class="col-12 col-lg-4 my-4 text-center mx-0">
+            <h3 class="ms-4">Orari del centro</h3>
+            <ul class=" my-4">
+              <li><span><i class="fa-regular fa-clock mx-1"></i></span> Martedì 09-19</li>
+              <li><span><i class="fa-regular fa-clock mx-1"></i></span> Mercoledì 09-19</li>
+              <li><span><i class="fa-regular fa-clock mx-1"></i></span> Giovedì 09-19</li>
+              <li><span><i class="fa-regular fa-clock mx-1"></i></span> Venerdì 09-19</li>
+              <li><span><i class="fa-regular fa-clock mx-1"></i></span> Sabato 09-19</li>
+              
+            </ul>
+          </div>
 
-          <div class="col-12 col-lg-6 my-4">
+          <div class="col-12 col-lg-4 my-4">
             <div>
 
-              <h3 class="text-center">CENTRO ESTETICO</h3>
-              <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique officia sed, architecto sunt nihil? Velit neque porro rem amet, distinctio quam quia quisquam recusandae, temporibus ipsa vitae dolores voluptates!</p>
+              <h3 class="text-center">Unique souls</h3>
+              <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique officia sed, architecto sunt nihil? Velit neque porro rem amet, distinctio quam quia quisquam recusandae, temporibus ipsa vitae dolores voluptates!</p>
             </div>
 
             <div class="text-center">
@@ -304,9 +320,7 @@
             </div>
           </div>
 
-          
-
-          <div class="col-12 col-lg-6 my-4">
+          <div class="col-12 col-lg-4 my-4">
             <h3>Contatti</h3>
             <ul class="my-4">
               <li class="ms-1">
@@ -323,6 +337,9 @@
                 <span><i class="fa-solid fa-location-dot"></i></span>          
                 <a href="#">via unique souls 34</a>
             </li>
+            <li>
+            <button class="btn btn-primary mt-3">Contattaci</button>
+            </li>
             </ul>
           </div>
         </div>
@@ -335,6 +352,7 @@
             </div>
         </div>
     </div>
+    </footer>
     </footer>
 
     <!-- bootstrap js -->
