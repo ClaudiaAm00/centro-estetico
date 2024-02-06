@@ -22,13 +22,12 @@ body{
     height: 60px;
     line-height: 60px;
     z-index:1;
-    opacity: 0.8 !important;
     margin: -10px 0px;
 }
 
 .navCustom{
-     background-color: rgb(40,40,40) !important;
-    
+    background-color: rgb(40, 40, 40) !important;
+    opacity: 0.8 !important;
 }
 
 .navCustom a:hover {
@@ -36,14 +35,14 @@ body{
 }
 
 .menu a{
-    color: rgb(246, 245, 238) !important;
+    color: white !important;
     margin-left: 70px;
     padding: 5px 50px  !important;
     font-size: 15px;
 }
 
 .menu a:hover{
-    color: #505050 !important;
+    color: #747474 !important;
 }
 
 
@@ -66,17 +65,7 @@ body{
     
 }
 
-/* SEZIONE HEADER PAGINA DETTAGLIO */
-.headerDettaglio{
-    background-color: #959595;
-    height: 700px;
-    padding-top: 8rem;
-    padding-bottom: 8rem ;
-    background-image: url('/images/imgstaff.jpg');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply ;
-}
+
 
 .linea{
     display: block;
@@ -162,12 +151,44 @@ body{
 
 
 /* PAGINA DETTAGLIO */
-.menuDettaglio{
+
+/* SEZIONE HEADER PAGINA DETTAGLIO */
+.headerDettaglio{
+    background-color: #747474;
+    height: 500px;
+    padding-top: 8rem;
+    padding-bottom: 8rem ;
+    background-image: url('/images/imgstaff.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply ;
+}
+
+
+
+/* NAVBAR PAGINE DETTAGLIO + AREA DI SERVIZIO */
+.menuDettaglio a{
     margin-left: 1000px;
     padding: 5px 50px  !important;
     font-weight: bold;
     font-size: 18px;
-    
+    color:  rgb(246, 245, 238) !important;
+    margin-top: 20px;
+}
+.menuDettaglio:hover{
+    color: #747474 !important;
+}
+
+.menuDettaglio2 {
+	margin-left: 1000px;
+	padding: 5px 0px !important;
+	 font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.menuDettaglio2 a{
+	color:  white !important;
 }
 
 .imgCard{
@@ -177,8 +198,8 @@ body{
 
 /* Pagina area gestione personale */
 .bg-card{
-background-color: #016A70;
-color: white !important;
+background-color: #2e2e2e;
+color:rgb(246, 245, 238) !important;
 /* aggiungere un bordo colorato */
 }
 
@@ -188,7 +209,7 @@ color: white !important;
 
 .titoloAreaPersonale > a {
     text-decoration: none !important;
-    color: #016A70;
+    color: #2e2e2e;
 }
 
 .immagineProfilo{
@@ -197,8 +218,9 @@ color: white !important;
 }
 
 .ftAreaPersonale{
-    margin-top: 200px;   
-    background-color:  #F1F0E8;
+    margin-top: 320px;
+    background-color: rgb(40, 40, 40) !important;
+    color:  rgb(246, 245, 238) !important;
 }
 
 /* pagina servizi */
@@ -208,11 +230,11 @@ color: white !important;
 
 .areaRiservata a {
     text-decoration: none;
-    color: #016A70;
+    color: #2e2e2e;
 }
 
 .gestionePrestazioni{
-    background-color: #016A70 !important;
+    background-color: #2e2e2e !important;
     
 }
 
@@ -227,29 +249,88 @@ color: white !important;
     color: rgb(230, 230, 230);
 }
 
-.btnElimina{
-    background-color: #016A70 !important;
-    color: white !important;
+.btnAreaRiservata{
+    background-color: #2e2e2e !important;
+    color: rgb(246, 245, 238) !important;
    
 }
 
-.btnElimina:hover{
-    color: rgb(239, 239, 239) !important; 
+.btnAreaRiservata:hover{
+    color: #747474 !important; 
+}
+
+/* sezione login */
+.titolo{
+    font-family: 'Sacramento', cursive !important;
+    color: rgb(246, 245, 238) !important;
+    font-size: 30px !important;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.titoloLogin{
+    margin-top: 120px !important;
+}
+.form {
+    width: 300px !important;
+    border: 2px solid #282828;
+    margin-top: 80px !important;
+}
+.accesso {
+    margin-top: 80px !important;
+}
+.btn-accedi{
+   background-color: #282828 !important;
+   color: rgb(246, 245, 238) !important ;
+   display: flex !important;
+    align-items: center !important;
+    margin: 0 auto;
+}
+.btn-accedi:hover{
+    color: #505050 !important;
+}
+
+/* SEZIONE AREA RISERVATA */
+.areaRiservata{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    
+}
+
+/* SEZIONE FORM REGISTRAZIONE STAFF */
+.formRegistrazione{
+    width: 600px !important;
+}
+.ftAreaPersonale2{
+    margin-top: 50px;
+    background-color: rgb(40, 40, 40) !important;
+    color:  rgb(246, 245, 238) !important;
 }
 
 
 
 
 @media screen and (max-width:990px){
-    
+ 
     .menu a {
         padding: 0px 0px !important;
-        margin: 5px 5px;
+        margin: 0px 5px;
     }
 
     .menuDettaglio {
         padding: 0px 0px !important;
         margin: 10px 10px;
+       
+    }
+
+    .menuDettaglio a {
+        padding: 0px 0px !important;
+        margin: 0px 5px;
+    }
+    
+    .menuDettaglio2 {
+    padding: 0px 0px !important;
+        margin: 0px 5px;
+        color:white !important;
     }
 
     .gestionePrestazioni a{
@@ -260,5 +341,6 @@ color: white !important;
     .staffSection .imgStaff{
         margin-left: 0px;
     }
+    
 
 }
