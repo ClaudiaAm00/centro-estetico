@@ -71,64 +71,14 @@
                         </thead>
                         <tbody>
     
-                            <tr>
-                                <td>Servizio 1</td>
-                                <td>Descrizione</td>
-                                <td>Hair</td>
-                                <td>20.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
+                            <tr th:each="p : ${prestazioni}">
+                                <td th:text="${p.tipologia}"></td>
+                                <td th:text="${p.descrizione}"></td>
+                                <td th:text="${p.categoria}"></td>
+                                <td th:text="'€' + ${p.prezzo}"></td>
+                                <td><button type="button" class="btn btnAreaRiservata" th:href="@{/formprestazioni(id=${p.id})}">Modifica</button>
+                                <button type="button" class="btn btnAreaRiservata mx-4" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</button></td>
                               
-                            </tr>
-    
-                            <tr>
-                                <td>Servizio 2</td>
-                                <td>Descrizione</td>
-                                <td>Beauty</td>
-                                <td>20.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
-                                
-                            </tr>
-    
-                            <tr>
-                                <td>Servizio 3</td>
-                                <td>Descrizione</td>
-                                <td>Hair</td>
-                                <td>30.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
-                                
-                            </tr>
-                        
-                            <tr>
-                                <td>Servizio 4</td>
-                                <td>Descrizione</td>
-                                <td>Beauty</td>
-                                <td>40.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
-                                
-                            </tr>
-    
-                            <tr>
-                                <td>Servizio 5</td>
-                                <td>Descrizione</td>
-                                <td>Hair</td>
-                                <td>50.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
-                                
-                            </tr>
-    
-                            <tr>
-                                <td>Servizio 6</td>
-                                <td>Descrizione</td>
-                                <td>Beauty</td>
-                                <td>60.00E</td>
-                                <td><button type="button" class="btn btnAreaRiservata">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mx-4">Elimina</button></td>
-                                
                             </tr>
     
                         </tbody>
