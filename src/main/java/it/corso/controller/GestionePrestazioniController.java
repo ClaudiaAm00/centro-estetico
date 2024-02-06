@@ -27,8 +27,8 @@ public class GestionePrestazioniController {
 			return "redirect:/login";
 		
 		// se amministratore visualizza la pagina
-		List<Prestazione> prestazione = prestazioneService.getPrestazioni();
-		model.addAttribute("prestazione", prestazione);
+		List<Prestazione> prestazioni = prestazioneService.getPrestazioni();
+		model.addAttribute("prestazioni", prestazioni);
 
 		return "gestioneprestazioni";
 	}
