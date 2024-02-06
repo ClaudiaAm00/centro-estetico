@@ -14,6 +14,20 @@ body{
     background-color: rgb(246, 245, 238) !important;
 }
 
+/* LOGO  */
+.logo{
+    max-width: 150px;
+    width: 100%;
+
+}
+
+.logoNavbar{
+    max-width: 80px;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 30px;
+
+}
 /* NAVBAR */
 .navbar{
     position: fixed !important;
@@ -23,11 +37,12 @@ body{
     line-height: 60px;
     z-index:1;
     margin: -10px 0px;
+    opacity: 0.8 !important;
 }
 
 .navCustom{
     background-color: rgb(40, 40, 40) !important;
-    opacity: 0.8 !important;
+    
 }
 
 .navCustom a:hover {
@@ -36,7 +51,8 @@ body{
 
 .menu a{
     color: white !important;
-    margin-left: 70px;
+    margin-left: 50px;
+    margin-top: 20px;
     padding: 5px 50px  !important;
     font-size: 15px;
 }
@@ -52,7 +68,7 @@ body{
     height: 500px;
     padding-top: 8rem;
     padding-bottom: 8rem ;
-    background-image: url('/images/salone.jpg');
+    background-image: url('/images/salone2.jpg');
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply ;
@@ -82,8 +98,7 @@ body{
 .ultimeNovita h5{
     margin-top: 10px;
     font-size: 25px;
-    font-weight: bold;
-    color: white;
+    color: rgb(246, 245, 238);
 }
 
 /* SEZIONE STAFF */
@@ -104,7 +119,8 @@ body{
     margin-left: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
+    
 }
 
 .imgStaff:hover{
@@ -115,13 +131,14 @@ body{
     opacity: 0;
     transition: opacity 0.4s;
     color: white;
+    font-weight: bold;
     text-align: center;
     
 }
 
 .infoStaff:hover{
     opacity: 1;
-    
+  
 }
 
 /* MAPPA GOOGLE */
@@ -159,18 +176,15 @@ body{
     padding-top: 8rem;
     padding-bottom: 8rem ;
     background-image: url('/images/imgstaff.jpg');
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-blend-mode: multiply ;
 }
-
-
 
 /* NAVBAR PAGINE DETTAGLIO + AREA DI SERVIZIO */
 .menuDettaglio a{
     margin-left: 1000px;
     padding: 5px 50px  !important;
-    font-weight: bold;
     font-size: 18px;
     color:  rgb(246, 245, 238) !important;
     margin-top: 20px;
@@ -179,21 +193,11 @@ body{
     color: #747474 !important;
 }
 
-.menuDettaglio2 {
-	margin-left: 1000px;
-	padding: 5px 0px !important;
-	 font-weight: bold;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.menuDettaglio2 a{
-	color:  white !important;
-}
-
 .imgCard{
     max-width: 320px;
     width: 100%;
+    margin-left: 200px;
+    border: 2px solid #282828;
 }
 
 /* Pagina area gestione personale */
@@ -238,7 +242,16 @@ color:rgb(246, 245, 238) !important;
     
 }
 
+.gestionePrestazioni a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 1000px;
+}
 
+.gestionePrestazioni a:hover{
+    color: rgb(230, 230, 230);
+}
 
 .btnAreaRiservata{
     background-color: #2e2e2e !important;
@@ -255,8 +268,8 @@ color:rgb(246, 245, 238) !important;
     font-family: 'Sacramento', cursive !important;
     color: rgb(246, 245, 238) !important;
     font-size: 30px !important;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 10px;
+    margin-top: 40px;
 }
 .titoloLogin{
     margin-top: 120px !important;
@@ -301,7 +314,10 @@ color:rgb(246, 245, 238) !important;
 
 
 @media screen and (max-width:990px){
- 
+    .logoNavbar{
+        padding: 0px 0px !important;
+        margin: 0px 0px;
+    }
     .menu a {
         padding: 0px 0px !important;
         margin: 0px 5px;
@@ -317,12 +333,6 @@ color:rgb(246, 245, 238) !important;
         padding: 0px 0px !important;
         margin: 0px 5px;
     }
-    
-    .menuDettaglio2 {
-    padding: 0px 0px !important;
-        margin: 0px 5px;
-        color:white !important;
-    }
 
     .gestionePrestazioni a{
         padding: 0px 0px !important;
@@ -332,6 +342,10 @@ color:rgb(246, 245, 238) !important;
     .staffSection .imgStaff{
         margin-left: 0px;
     }
+
+   .imgCard{
+    margin-left: 10px;
+   }
     
 
 }
