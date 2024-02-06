@@ -28,7 +28,7 @@ public class IndexController {
 		model.addAttribute("hair", prestazioneService.trovaHair());
 		model.addAttribute("beauty", prestazioneService.trovaBeauty());
 		
-		model.addAttribute(staffService.getAllStaff());
+		model.addAttribute("staff", staffService.getAllStaff());
 		
 		return "index";
 	}

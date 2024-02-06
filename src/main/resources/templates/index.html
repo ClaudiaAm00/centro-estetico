@@ -65,14 +65,14 @@
 <!-- Le immagini sono da mettere al centro e da cambiare naturalmente-->
  <h2 class="mt-5 mb-5">Le ultime novità</h2>
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide ultimeNovita" data-bs-ride="carousel">
-    <div class="carousel-inner">
+ <!--   <div id="carouselExampleSlidesOnly" class="carousel slide ultimeNovita" data-bs-ride="carousel">
+    <div class="carousel-inner" th:each="n : ${n.prestazione}>
       <div class="carousel-item active">
         <p class="mt-5"></p>
-        <img src="images/taglio.jpg" class=" w-75" alt="...">
-        <h5 class="mb-3" >Taglio visagistico</h5>
+        <img th:src="${n.foto}  th:if="${n.foto != null AND !#strings.isEmpty(n.foto)}" class=" w-75" alt="...">
+        <h5 class="mb-3" th:text="${n.tipologia}"></h5>
       </div>
-      <div class="carousel-item">
+   <!--    <div class="carousel-item">
         <p class="mt-5"></p> 
         <img src="images/tinta.jpg" class=" w-75" alt="...">  
         <h5 class="mb-3">Tinta naturale</h5>
@@ -81,9 +81,9 @@
         <p class="mt-5"></p>       
         <img src="images/manicure.jpg" class="w-75" alt="..."> 
         <h5 class="mb-3" >Manicure</h5>
-      </div>
+      </div> 
     </div>
-  </div>
+  </div>  -->
 </section>
 
     <!-- SEZIONE PRESTAZIONI -->
@@ -194,14 +194,18 @@
    <section id="staff" class="staffSection mt-5">
       <div class="container">
     <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
-        <div class="row">
-          <div class="col-12 col-md-4 imgStaff" style="background-image: url('/images/fotoStaff1.jpg');">
+        <div class="row" >
+          <div class="col-12 col-md-4 imgStaff" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
             <div class="infoStaff">
-              <h4>Nome Cognome</h4>
-              <h5 >Parrucchiere</h5>
+              <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
+              <h5 th:text="${p.ruolo}"></h5>
             </div> 
           </div>
-          <div class="col-12 col-md-4 imgStaff " style="background-image: url('/images/fotoStaff2.jpg');">
+          
+     <!--   prova precedente
+     th:src="${p.foto}" style="background-image" 
+     
+        <div class="col-12 col-md-4 imgStaff " style="background-image: url(${p.foto});">
             <div class="infoStaff">
               <h4>Nome Cognome</h4>
               <h5 >Parrucchiere</h5>
@@ -214,7 +218,7 @@
             </div> 
           </div>
         </div>
-      </div>
+      </div> 
 
       <div class="container">
       <div class="row">
@@ -235,8 +239,8 @@
             <h4>Nome Cognome</h4>
             <h5 >Parrucchiere</h5>
           </div> 
-        </div>
-      </div>
+        </div> -->
+      </div> 
      
       </div>
       
