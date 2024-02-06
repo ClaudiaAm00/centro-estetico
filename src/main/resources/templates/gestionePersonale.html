@@ -59,6 +59,9 @@
                         <h5 class="card-text" th:if="${p.contratto != null AND !#strings.isEmpty(p.contratto)}" th:text="'Contratto: ' + ${p.contratto}"></h5>
                         <h5 class="card-text" th:if="${p.email != null AND !#strings.isEmpty(p.email)}" th:text="'Email: ' + ${p.email}"></h5>
                         <h5 class="card-text" th:if="${p.telefono != null AND !#strings.isEmpty(p.telefono)}" th:text="'Telefono: ' + ${p.telefono}"></h5>
+                        
+                        <button type="button" class="btn btnAreaRiservata mt-3">Modifica</button>
+                        <button type="button" class="btn btnAreaRiservata mt-3">Elimina</button>
                       </div>
                     </div>
               </div>

@@ -238,16 +238,7 @@ color:rgb(246, 245, 238) !important;
     
 }
 
-.gestionePrestazioni a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    margin-left: 1000px;
-}
 
-.gestionePrestazioni a:hover{
-    color: rgb(230, 230, 230);
-}
 
 .btnAreaRiservata{
     background-color: #2e2e2e !important;
