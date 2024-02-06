@@ -17,20 +17,20 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
            <div class="container-fluid navCustom">
              <a class="navbar-brand titolo" th:href="@{/}">Unique Souls</a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav menuDettaglio">
+               <ul class="navbar-nav menuDettaglio2">
                  <li class="nav-item">
-                   <a class="nav-link riservata" href="/index.html">Home</a>
+                   <a class="nav-link" href="/index.html">Home</a>
                    <!-- inserire il link per tornare all'area riservata -->
                  </li>
                  <li class="nav-item">
-                  <a class="nav-link riservata" th:href="@{/areariservata}">Area riservata</a>
+                  <a class="nav-link" th:href="@{/areariservata}">Area riservata</a>
                   <!-- inserire il link per tornare all'area riservata -->
                 </li>
                </ul>
@@ -38,32 +38,34 @@
            </div>
        </nav>
     <header class="text-center titoloAreaPersonale">
-        <h1 class="text-center "> Gestione del Personale </h1>
+        <h2 class="text-center "> Gestione del Personale </h2>
         <br>
         <a th:href="@{/formpersonale}">Registra dipendente</a>
       
     </header>
-    <section>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img src="images/Estetista-scaled.jpeg" class="immagineProfilo">
-                </div>
-                <div class="col-12 col-md-6 mt-5">
-                    <div class="card">
-                        <div class="card-body bg-card">
-                          <h5 class="card-title text-center">Nome Cognome</h5>
-                          <h5 class="card-text">Ruolo: </h5>
-                          <h5 class="card-text">Data di assunzione: </h5>
-                          <h5 class="card-text">Contratto: </h5>
-                          <h5 class="card-text">Email: </h5>
-                          <h5 class="card-text">Telefono: </h5>
-                        </div>
+    
+   <section>
+      <div class="container mt-5">
+          <div class="row" th:each="p : ${staff}">
+              <div class="col-12 col-md-6 d-flex justify-content-center">
+                  <img th:src="${p.foto}" class="immagineProfilo">
+              </div>
+              <div class="col-12 col-md-6 mt-5">
+                  <div class="card">
+                      <div class="card-body bg-card">
+                        <h5 class="card-title text-center" th:text="${p.nome} + ' ' + ${p.cognome}"></h5>
+                        <h5 class="card-text" th:text="'Ruolo: ' + ${p.ruolo}"></h5>
+                        <h5 class="card-text" th:text="'Data di assunzione: ' + ${p.dataAssunzione}"></h5>
+                        <h5 class="card-text" th:if="${p.contratto != null AND !#strings.isEmpty(p.contratto)}" th:text="'Contratto: ' + ${p.contratto}"></h5>
+                        <h5 class="card-text" th:if="${p.email != null AND !#strings.isEmpty(p.email)}" th:text="'Email: ' + ${p.email}"></h5>
+                        <h5 class="card-text" th:if="${p.telefono != null AND !#strings.isEmpty(p.telefono)}" th:text="'Telefono: ' + ${p.telefono}"></h5>
                       </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div>
+              </div>
+              &emsp;
+          </div>
+      </div>
+  </section>
 
     <footer class="ftAreaPersonale">
       <div class="container">

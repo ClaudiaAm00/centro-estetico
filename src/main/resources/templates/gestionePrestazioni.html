@@ -19,14 +19,14 @@
     <body>
 
         <!-- NavBar-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid navCustom">
             <a class="navbar-brand titolo" th:href="@{/}">Unique Souls</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav menuDettaglio">
+              <ul class="navbar-nav menuDettaglio2">
                 <li class="nav-item">
                   <a class="nav-link riservata" th:href="@{/}">Home</a>
                   <!-- inserire il link per tornare all'area riservata -->
@@ -42,7 +42,7 @@
 
         <!-- Header-->
         <header class="areaRiservata text-center">
-          <h1>GESTIONE SERVIZI</h1>
+          <h2>GESTIONE SERVIZI</h2>
           <a class="link-offset-3 mt-3" th:href="@{/formprestazioni}">Aggiungi servizio</a>
         </header>
   
@@ -64,7 +64,7 @@
                                 <th>TIPOLOGIA</th>
                                 <th>DESCRIZIONE</th>
                                 <th>CATEGORIA</th>
-                                <th>PREZZO</th>
+                                <th>PREZZO<br><span>a partire da:</span></th>
                                 <th></th>
                             </tr>
                         </thead>
