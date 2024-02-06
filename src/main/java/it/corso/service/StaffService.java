@@ -13,4 +13,5 @@ public interface StaffService {
 	void cancellaStaff(Staff staff);
 	
 	List<Staff> trovaStaffDispari();
+	void aggiornaStaff(Staff staff, MultipartFile foto, int id);
 }

@@ -16,7 +16,7 @@ public class StaffServiceImpl implements StaffService {
 
 	@Override
 	public void registraStaff(Staff staff, MultipartFile foto) {
-		
+	
 		if(foto != null && !foto.isEmpty())
 		{
 			try 
@@ -54,6 +54,37 @@ public class StaffServiceImpl implements StaffService {
 		return staffDao.trovaStaffDispari();
 	}
 
+	@Override
+	public void aggiornaStaff(Staff staff, MultipartFile foto, int id) {
+		
+		Staff staffEsistente = getStaffById(staff.getId());
+		if(staffEsistente != null) 
+		{
+			String immagine = staffEsistente.getFoto();
+			staffEsistente = staff;
+			if(foto != null && !foto.isEmpty())
+			{
+				try 
+				{
+					String estensione = foto.getContentType();
+					System.out.println(estensione);
+					staffEsistente.setFoto("data:" + estensione + ";base64," + Base64.getEncoder().encodeToString(foto.getBytes()));
+	
+				} catch (Exception e) 
+				{
+					System.out.println(e.getMessage());
+				}
+				
+			} else {
+				staffEsistente.setFoto(immagine);
+			}
+			
+			staffDao.save(staffEsistente);
+			
+		}
+
+	}
+	
 }
 
 
