@@ -16,7 +16,7 @@ public class DettaglioController {
 	
 	@GetMapping
 	public String getPage(Model model,
-			@RequestParam("id") int id) {
+			@RequestParam(name = "id") int id) {
 		model.addAttribute("prestazione", prestazioneService.getPrestazioneById(id));
 		return "dettaglio";
 	}

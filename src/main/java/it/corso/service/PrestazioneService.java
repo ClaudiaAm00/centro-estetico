@@ -13,7 +13,7 @@ public interface PrestazioneService
 	List<Prestazione> getPrestazioni();
 	void cancellaPrestazione(Prestazione prestazione);
 	
-	List<Prestazione> listaNuovePrestazioni(int id);
+	List<Prestazione> listaNuovePrestazioni();
 	List<Prestazione> trovaHair();
 	List<Prestazione> trovaBeauty();
 }

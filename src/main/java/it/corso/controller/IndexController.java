@@ -24,7 +24,7 @@ public class IndexController {
 	@GetMapping
 	public String getPage(Model model)
 	{
-		model.addAttribute("nuovePrestazioni", prestazioneService.listaNuovePrestazioni(0));
+		model.addAttribute("nuovePrestazioni", prestazioneService.listaNuovePrestazioni());
 		model.addAttribute("hair", prestazioneService.trovaHair());
 		model.addAttribute("beauty", prestazioneService.trovaBeauty());
 		

@@ -54,8 +54,8 @@ public class PrestazioneServiceImpl implements PrestazioneService {
 	}
 
 	@Override
-	public List<Prestazione> listaNuovePrestazioni(int id) {
-		return prestazioneDao.listaNuovePrestazioni(id);
+	public List<Prestazione> listaNuovePrestazioni() {
+		return prestazioneDao.listaNuovePrestazioni();
 	}
 
 	@Override
