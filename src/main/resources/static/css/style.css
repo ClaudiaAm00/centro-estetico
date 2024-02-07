@@ -290,8 +290,9 @@ color:rgb(246, 245, 238) !important;
     border: 2px solid #282828;
     margin-top: 80px !important;
 }
-.accesso {
-    margin-top: 100px !important;
+.pagineRiservate {
+    margin-top: 150px !important;
+    margin-bottom:300px !important;
 }
 .btn-accedi{
    background-color: #282828 !important;
