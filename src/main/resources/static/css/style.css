@@ -283,7 +283,7 @@ color:rgb(246, 245, 238) !important;
     margin-top: 40px;
 }
 .titoloLogin{
-    margin-top: 120px !important;
+    margin-top: 150px !important;
 }
 .form {
     width: 300px !important;
@@ -291,7 +291,7 @@ color:rgb(246, 245, 238) !important;
     margin-top: 80px !important;
 }
 .accesso {
-    margin-top: 80px !important;
+    margin-top: 100px !important;
 }
 .btn-accedi{
    background-color: #282828 !important;
@@ -306,7 +306,7 @@ color:rgb(246, 245, 238) !important;
 
 /* SEZIONE AREA RISERVATA */
 .areaRiservata{
-    /*margin-top: 150px;*/
+    margin-top: 150px;
     margin-bottom: 50px;
     
 }
@@ -320,6 +320,8 @@ color:rgb(246, 245, 238) !important;
     background-color: rgb(40, 40, 40) !important;
     color:  rgb(246, 245, 238) !important;
     bottom: 0px !important;
+     position: fixed !important;
+  	width: 100%;
 }
 
 .sezioneForm{
