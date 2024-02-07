@@ -306,7 +306,7 @@ color:rgb(246, 245, 238) !important;
 
 /* SEZIONE AREA RISERVATA */
 .areaRiservata{
-    margin-top: 150px;
+    /*margin-top: 150px;*/
     margin-bottom: 50px;
     
 }
@@ -319,6 +319,7 @@ color:rgb(246, 245, 238) !important;
     margin-top: 50px;
     background-color: rgb(40, 40, 40) !important;
     color:  rgb(246, 245, 238) !important;
+    bottom: 0px !important;
 }
 
 .sezioneForm{
