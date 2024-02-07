@@ -59,7 +59,6 @@ public class FormPersonaleController
 		staff.setEmail(email);
 		staff.setTelefono(telefono);
 		
-		System.out.println(idStaff);
 		if (idStaff != 0) {
 			staffService.aggiornaStaff(staff, foto, idStaff);
 		} else {

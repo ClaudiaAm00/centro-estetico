@@ -4,7 +4,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import it.corso.dao.PrestazioneDao;
 import it.corso.model.Prestazione;
 
@@ -66,6 +65,37 @@ public class PrestazioneServiceImpl implements PrestazioneService {
 	@Override
 	public List<Prestazione> trovaBeauty() {
 		return prestazioneDao.trovaBeauty();
+	}
+
+	@Override
+	public void aggiornaPrestazione(Prestazione prestazione, MultipartFile foto, int id) 
+	{
+		
+		Prestazione prestazioneEsistente = getPrestazioneById(prestazione.getId());
+		if(prestazioneEsistente != null) 
+		{
+			String immagine = prestazioneEsistente.getFoto();
+			prestazioneEsistente = prestazione;
+			if(foto != null && !foto.isEmpty())
+			{
+				try 
+				{
+					String estensione = foto.getContentType();
+					System.out.println(estensione);
+					prestazioneEsistente.setFoto("data:" + estensione + ";base64," + Base64.getEncoder().encodeToString(foto.getBytes()));
+	
+				} catch (Exception e) 
+				{
+					System.out.println(e.getMessage());
+				}
+				
+			} else {
+				prestazioneEsistente.setFoto(immagine);
+			}
+			
+			prestazioneDao.save(prestazioneEsistente);
+			
+		}
 	}
 
 }

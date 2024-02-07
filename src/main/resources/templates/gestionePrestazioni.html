@@ -72,12 +72,13 @@
                         <tbody>
     
                             <tr th:each="p : ${prestazioni}">
+                           <!-- 	<td th:src="${p.foto}" class="immagineProfilo"> -->
                                 <td th:text="${p.tipologia}"></td>
                                 <td th:text="${p.descrizione}"></td>
                                 <td th:text="${p.categoria}"></td>
                                 <td th:text="'€' + ${p.prezzo}"></td>
-                                <td><button type="button" class="btn btnAreaRiservata" th:href="@{/formprestazioni(id=${p.id})}">Modifica</button>
-                                <button type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</button></td>
+                                <td><a type="button" class="btn btnAreaRiservata" th:href="@{/formprestazioni(id=${p.id})}">Modifica</a>
+                                <a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</a></td>
                               
                             </tr>
     

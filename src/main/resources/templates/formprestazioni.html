@@ -48,26 +48,27 @@
     <div class="row mt-5">
         <div class="col-12 col-md-6 mb-5">
             <form class="formRegistrazione" action="formprestazioni/aggiungiprestazione" method="POST" enctype="multipart/form-data">
+           	    <input type="hidden" name="id" th:value="${prestazione.id}">
                 <div class="mb-3">
                     <label class="form-label">Tipologia</label>
-                <input name="tipologia" type="text" class="form-control" required> 
+                <input name="tipologia" th:value="${prestazione.tipologia}" type="text" class="form-control" required> 
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Descrizione</label>
-                  <input name="descrizione" type="text" class="form-control" required>
+                  <input name="descrizione" th:value="${prestazione.descrizione}" type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                  <input name="prezzo" type="number" step="any" class="form-control" required>                   
+                  <input name="prezzo" th:value="${prestazione.prezzo}" type="number" step="any" class="form-control" required>                   
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Categoria</label>
-                    <input name="categoria" type="text" class="form-control" required>
+                    <input name="categoria" th:value="${prestazione.categoria}" type="text" class="form-control" required>
                 </div>              
                                 
               	<div class="mb-3">
                     <label class="form-label">Staff</label>
-                    <input name="fk_id_staff" type="text" class="form-control">
+                    <input name="staff" th:value="${prestazione.staff}" type="text" class="form-control">
                 </div>
                 
                 <div class="mb-3">
