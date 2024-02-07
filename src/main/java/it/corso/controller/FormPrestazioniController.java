@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import it.corso.model.Prestazione;
 import it.corso.model.Staff;
 import it.corso.service.PrestazioneService;
+import it.corso.service.StaffService;
 import jakarta.servlet.http.HttpSession;
 
 
@@ -20,6 +21,9 @@ public class FormPrestazioniController
 {
 	@Autowired
 	private PrestazioneService prestazioneService;
+	
+	@Autowired
+	private StaffService staffService;
 	
 	private Prestazione prestazione;
 	
@@ -34,6 +38,7 @@ public class FormPrestazioniController
 		prestazione = idPrestazione == null ? new Prestazione(): prestazioneService.getPrestazioneById(idPrestazione);
 		
 		model.addAttribute("prestazione", prestazione);
+		model.addAttribute("staff", staffService.getAllStaff());
 		
 		return "formprestazioni";
 	}

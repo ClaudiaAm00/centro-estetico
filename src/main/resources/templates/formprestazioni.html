@@ -81,8 +81,7 @@
 			        <br>
 			        <select name="staff" id="staff">
 			        	<option value="" selected>--</option>
-						<option value="hair">Hair</option>
-						<option value="beauty">Beauty</option>	
+						<option th:each="p : ${staff}" th:value="${p.id}" th:text="${p.nome} + ' ' + ${p.cognome} + ' (' + ${p.ruolo} + ')'"></option>
 					</select>
                     
                 </div>                                    
