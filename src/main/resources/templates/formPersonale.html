@@ -39,60 +39,55 @@
     </nav>
 
 <!-- FORM -->
-<section >
-<div class="container">
-    <div class="row text-center">
-        <div class="col-12 mt-5">
-            
-            <h2 class="mt-5">Registra un nuovo dipendente</h2>
-            <br>
-        </div>
-    </div>
+<section class="sezioneForm">
+<h2 class=" text-center">Registra un nuovo dipendente</h2>
     
-<div class="container d-flex justify-content-center"> 
-    <div class="row mt-5">
-        <div class="col-12 col-md-8 mb-5">
-            <form class="formRegistrazione" action="formpersonale/aggiungipersona" method="POST" enctype="multipart/form-data">
-            	<input type="hidden" name="id" th:value="${staff.id}">
-                <div class="mb-3">
-                    <label class="form-label">Nome</label>
-                    <input name="nome" th:value="${staff.nome}" type="text" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Cognome</label>
-                    <input name="cognome" th:value="${staff.cognome}" type="text" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Ruolo</label>
-                    <input name="ruolo" th:value="${staff.ruolo}" type="text" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">Carica una foto</label>
-                    <input name="foto" th:value="${staff.foto}" class="form-control" type="file" id="formFileMultiple" multiple>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Data di assunzione</label>
-                    <input name="dataAssunzione" th:value="${staff.dataAssunzione}" type="date" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Contratto</label>
-                    <input name="contratto" th:value="${staff.contratto}" type="text" class="form-control">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input name="email" type="email" th:value="${staff.email}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Telefono</label>
-                  <input name="telefono" th:value="${staff.telefono}" type="text" class="form-control">
-                </div>
+<div class="d-flex justify-content-center mt-5">     
+	<form class="formRegistrazione" action="formpersonale/aggiungipersona" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="id" th:value="${staff.id}">
+          <div class="mb-3">
+               <label class="form-label">Nome</label>
+               <input name="nome" th:value="${staff.nome}" type="text" class="form-control" required>
+          </div>
+          
+          <div class="mb-3">
+               <label class="form-label">Cognome</label>
+               <input name="cognome" th:value="${staff.cognome}" type="text" class="form-control" required>
+          </div>
+                
+           <div class="mb-3">
+               <label class="form-label">Ruolo</label>
+               <input name="ruolo" th:value="${staff.ruolo}" type="text" class="form-control" required>
+         </div>
+                
+         <div class="mb-3">
+               <label for="formFileMultiple" class="form-label">Carica una foto</label>
+               <input name="foto" th:value="${staff.foto}" class="form-control" type="file" id="formFileMultiple" multiple>
+         </div>
+                
+         <div class="mb-3">
+              <label class="form-label">Data di assunzione</label>
+          		<input name="dataAssunzione" th:value="${staff.dataAssunzione}" type="date" class="form-control">
+         </div>
+             
+         <div class="mb-3">
+              <label class="form-label">Contratto</label>
+              <input name="contratto" th:value="${staff.contratto}" type="text" class="form-control">
+         </div>
+         
+         <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input name="email" type="email" th:value="${staff.email}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         </div>
+                
+          <div class="mb-3">
+              <label class="form-label">Telefono</label>
+              <input name="telefono" th:value="${staff.telefono}" type="text" class="form-control">
+          </div>
 
-                <button type="submit" class="btn btnAreaRiservata mb-5">Registra</button>
-              </form>
-        </div>
-    </div>
-</div>
-</div>
+          <button type="submit" class="btn btnAreaRiservata mb-5">Registra</button>
+    </form>
+ </div>
 
 </section>
 

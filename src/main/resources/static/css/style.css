@@ -321,7 +321,9 @@ color:rgb(246, 245, 238) !important;
     color:  rgb(246, 245, 238) !important;
 }
 
-
+.sezioneForm{
+    margin-top: 150px;
+}
 
 
 @media screen and (max-width:990px){
