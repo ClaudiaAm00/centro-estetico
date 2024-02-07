@@ -77,7 +77,7 @@
                                 <td th:text="${p.tipologia}"></td>
                                 <td th:text="${p.descrizione}"></td>
                                 <td th:text="${p.categoria}"></td>
-                                <td th:text="'€' + ${p.prezzo}"></td>
+                                <td th:text="'€ ' + ${#numbers.formatDecimal(p.prezzo,0,'POINT',2,'COMMA')}"></td>
                                 <td><a type="button" class="btn btnAreaRiservata" th:href="@{/formprestazioni(id=${p.id})}">Modifica</a>
                                 <a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</a></td>
                               

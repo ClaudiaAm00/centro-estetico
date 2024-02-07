@@ -53,7 +53,7 @@
 		<div class="container mt-5">
               <div class="row">
                   <div class="col-12 col-md-6 ">
-                      <img src="images/taglioVisagistico.jpg" class="imgCard mb-5">
+                      <img th:src="${prestazione.foto}" class="imgCard mb-5">
                   </div>
                   
             	<div class="col-12 col-md-6 mt-5">
@@ -62,7 +62,7 @@
                     <div class="card-body ">
                       <h5 class="card-title text-center fw-bold" th:text="${prestazione.tipologia}"></h5>
                       <h5 class="card-text" th:text="${prestazione.descrizione}"></h5>
-                  	  <h5 class="card-text" th:text="${prestazione.prezzo}"></h5>
+                  	  <h5 class="card-text" th:text="'€ ' + ${#numbers.formatDecimal(prestazione.prezzo,0,'POINT',2,'COMMA')}"></h5>
                  
                   </div>
                 </div>
