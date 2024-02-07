@@ -183,7 +183,7 @@ body{
 
 /* NAVBAR PAGINE DETTAGLIO + AREA DI SERVIZIO */
 .menuDettaglio a{
-    margin-left: 1100px;
+    margin-left: 1000px;
     padding: 5px 50px  !important;
     font-size: 18px;
     color:  rgb(246, 245, 238) !important;
