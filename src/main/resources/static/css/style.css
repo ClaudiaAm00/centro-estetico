@@ -138,6 +138,7 @@ body{
 
 .infoStaff:hover{
     opacity: 1;
+    text-shadow:5px 5px 10px black !important;
   
 }
 
@@ -269,6 +270,7 @@ color:rgb(246, 245, 238) !important;
 .btnAreaRiservata{
     background-color: #2e2e2e !important;
     color: rgb(246, 245, 238) !important;
+    width:100px;
    
 }
 
@@ -309,9 +311,26 @@ color:rgb(246, 245, 238) !important;
 
 /* SEZIONE AREA RISERVATA */
 .areaRiservata{
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 50px;
     
+}
+.areaRiservata h2{
+	color:white;
+	
+}
+
+.bgImg{
+	background-color: #747474 !important;
+   	height: 100%;
+    background-image: url('/images/salone2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply !important;
+}
+
+.cardAreaRiservata{
+	margin-top:150px;
 }
 
 /* SEZIONE FORM REGISTRAZIONE STAFF */
@@ -347,6 +366,11 @@ color:rgb(246, 245, 238) !important;
     margin-bottom:20px;
     margin-left:50px;
 }
+
+.dropdownMenu:focus{
+	background-color: grey !important;
+}
+
 
 
 @media screen and (max-width:990px){

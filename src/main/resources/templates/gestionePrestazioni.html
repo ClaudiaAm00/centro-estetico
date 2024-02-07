@@ -39,7 +39,7 @@
                   <!-- inserire il link per tornare all'area riservata -->
                 </li>
                  <li class="nav-item">
-                <img src="images/imgUtente.png" class="fotoUtente2">
+                <img src="images/fotoStaff1.jpg" class="fotoUtente2">
               </li>
               </ul>
             </div>
@@ -70,6 +70,7 @@
                                 <th>TIPOLOGIA</th>
                                 <th>DESCRIZIONE</th>
                                 <th>CATEGORIA</th>
+                                <th>DIPENDENTE</th>
                                 <th>PREZZO<br><span>a partire da:</span></th>
                                 <th></th>
                                
@@ -82,6 +83,7 @@
                                 <td th:text="${p.tipologia}"></td>
                                 <td th:text="${p.descrizione}"></td>
                                 <td th:text="${p.categoria}"></td>
+                                <td th:text="${p.staff.nome} + ' ' + ${p.staff.cognome}"></td>
                                 <td th:text="'€ ' + ${#numbers.formatDecimal(p.prezzo,0,'POINT',2,'COMMA')}"></td>
                                 <td><a type="button" class="btn btnAreaRiservata" th:href="@{/formprestazioni(id=${p.id})}">Modifica</a>
                                 <a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</a></td>

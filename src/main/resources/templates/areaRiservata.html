@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   </head>
   
-    <body>
-
+    <body class="bgImg">
+		
         <!-- NavBar-->
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid navCustom">
@@ -42,13 +42,11 @@
           </div>
       </nav>
 
-        <!-- Header-->
-        <header class="areaRiservata text-center">
-          <h2>AREA RISERVATA</h2>
-        </header>
+        
 
-<section class="pagineRiservate">
-        <div class="container">
+<section class=" areaRiservata">
+ <h2 class="text-center">AREA RISERVATA</h2>
+        <div class="container cardAreaRiservata">
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="card text-center">
@@ -59,9 +57,9 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Scegli opzioni
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" th:href="@{/gestioneprestazioni}">Mostra lista servizi</a></li>
-                      <li><a class="dropdown-item" th:href="@{/formprestazioni}">Aggiungi servizi</a></li>
+                    <ul class="dropdown-menu ">
+                      <li><a class="dropdown-item dropdownMenu" th:href="@{/gestioneprestazioni}">Mostra lista servizi</a></li>
+                      <li><a class="dropdown-item dropdownMenu" th:href="@{/formprestazioni}">Aggiungi servizi</a></li>
                     </ul>
                   </div>
       
@@ -79,9 +77,9 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Scegli opzioni
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" th:href="@{/gestionepersonale}">Mostra lista personale</a></li>
-                      <li><a class="dropdown-item" th:href="@{/formpersonale}">Aggiungi personale</a></li>
+                    <ul class="dropdown-menu ">
+                      <li><a class="dropdown-item dropdownMenu" th:href="@{/gestionepersonale}">Mostra lista personale</a></li>
+                      <li><a class="dropdown-item dropdownMenu" th:href="@{/formpersonale}">Aggiungi personale</a></li>
                     </ul>
                   </div>
       
@@ -92,6 +90,7 @@
       
         </div>
 </section>
+
  <footer class="ftAreaPersonale">
           <div class="container">
             <div class="row text-center">
