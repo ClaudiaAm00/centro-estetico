@@ -24,7 +24,7 @@
   <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid navCustom">
-          <a class="navbar-brand titolo" th:href="@{/index}">Unique Souls</a>
+        <img src="images/uniqueSouls.png" class="nav-link logoNavbar" aria-current="page" th:href="@{/}"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -39,15 +39,13 @@
     </nav>
 
 <!-- FORM -->
-<section  class="areaRiservata">
+<section  class="sezioneForm">
 
   <h2  class="mt-5 text-center">Registra un nuovo servizio</h2>
   
-<div class="container d-flex justify-content-center">
-   
-    <div class="row mt-5">
-        <div class="col-12 col-md-6 mb-5">
-            <form class="formRegistrazione" action="formprestazioni/aggiungiprestazione" method="POST" enctype="multipart/form-data">
+<div class="d-flex justify-content-center">
+    
+         <form class="formRegistrazione" action="formprestazioni/aggiungiprestazione" method="POST" enctype="multipart/form-data">
            	    <input type="hidden" name="id" th:value="${prestazione.id}">
                 <div class="mb-3">
                     <label class="form-label">Tipologia</label>
@@ -61,26 +59,37 @@
                     <label class="form-label">Prezzo</label>
                   <input name="prezzo" th:value="${prestazione.prezzo}" type="number" step="any" class="form-control" required>                   
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Categoria</label>
-                    <input name="categoria" th:value="${prestazione.categoria}" type="text" class="form-control" required>
-                </div>              
-                                
-              	<div class="mb-3">
-                    <label class="form-label">Staff</label>
-                    <input name="staff" th:value="${prestazione.staff}" type="text" class="form-control">
-                </div>
                 
                 <div class="mb-3">
                     <label class="form-label">Carica una foto</label>
                     <input name="foto" class="form-control" type="file" multiple>
                 </div>
                 
-                <button type="submit" class="btn btnAreaRiservata">Registra</button>
-              </form>
-        </div>
-    </div>
-</div>
+                 <div class="mb-3">
+			        <label for="form-label">Seleziona una categoria</label>
+			        <br>
+			        <select name="categoria" id="categoria">
+			        	<option value="" selected>--</option>
+						<option value="hair">Hair</option>
+						<option value="beauty">Beauty</option>	
+					</select>
+			      </div>        
+                                
+              	<div class="mb-3">
+                    <label class="form-label">Staff</label>
+                    <label for="form-label">Seleziona un membro dello staff</label>
+			        <br>
+			        <select name="staff" id="staff">
+			        	<option value="" selected>--</option>
+						<option value="hair">Hair</option>
+						<option value="beauty">Beauty</option>	
+					</select>
+                    
+                </div>                                    
+             <button type="submit" class="btn btnAreaRiservata">Registra</button>
+          </form>
+ </div>
+
 </section>
 
 <footer class="ftAreaPersonale2">

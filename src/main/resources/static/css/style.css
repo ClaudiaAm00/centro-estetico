@@ -16,16 +16,16 @@ body{
 
 /* LOGO  */
 .logo{
-    max-width: 150px;
+    max-width: 180px;
     width: 100%;
 
 }
 
 .logoNavbar{
-    max-width: 80px;
+    max-width: 120px;
     width: 100%;
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 /* NAVBAR */
@@ -52,7 +52,7 @@ body{
 .menu a{
     color: white !important;
     margin-left: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 5px 50px  !important;
     font-size: 15px;
 }
@@ -183,11 +183,11 @@ body{
 
 /* NAVBAR PAGINE DETTAGLIO + AREA DI SERVIZIO */
 .menuDettaglio a{
-    margin-left: 1000px;
+    margin-left: 1100px;
     padding: 5px 50px  !important;
     font-size: 18px;
     color:  rgb(246, 245, 238) !important;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .menuDettaglio:hover{
     color: #747474 !important;
@@ -197,7 +197,7 @@ body{
 	margin-left: 900px;
     padding: 5px 50px  !important;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .menuDettaglio2 a{
