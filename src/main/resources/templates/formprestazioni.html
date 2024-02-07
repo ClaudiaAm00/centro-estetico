@@ -75,8 +75,8 @@
 			        <br>
 			        <select name="categoria" id="categoria">
 			        	<option value="" selected>--</option>
-						<option value="hair">Hair</option>
-						<option value="beauty">Beauty</option>	
+						<option value="hair" th:selected="${prestazione.categoria == 'hair'}">Hair</option>
+						<option value="beauty" th:selected="${prestazione.categoria == 'beauty'}">Beauty</option>	
 					</select>
 			      </div>        
                                 
@@ -86,7 +86,7 @@
 			        <br>
 			        <select name="staff" id="staff">
 			        	<option value="" selected>--</option>
-						<option th:each="p : ${staff}" th:value="${p.id}" th:text="${p.nome} + ' ' + ${p.cognome} + ' (' + ${p.ruolo} + ')'"></option>
+						<option th:each="p : ${staff}" th:value="${p.id}" th:selected="${prestazione.staff == p }" th:text="${p.nome} + ' ' + ${p.cognome} + ' (' + ${p.ruolo} + ')'"></option>
 					</select>
                     
                 </div>                                    
