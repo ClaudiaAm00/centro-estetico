@@ -154,7 +154,7 @@
 				<div class="card mt-5">
               		<img th:src="${p.foto}" class="card-img-top" alt="...">
               		<div class="card-body">
-              			<h5 class="card-title" th:text="${p.tipologia}"></h5>
+              			<h5 class="card-title fw-bold" th:text="${p.tipologia}"></h5>
               			<!--<p class="card-text" th:text="${p.descrizione}"></p>-->
               			<a th:href="@{/dettaglio(id=${p.id})}" th:text="'Dettaglio'" class="btn btnAreaRiservata">Dettagli</a>
               		</div>
