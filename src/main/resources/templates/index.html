@@ -72,10 +72,11 @@
         
       </div>
       
-      <div class="col-12 col-lg-4 text-center descrizione" >
-      <h2>Chi siamo</h2>
-      <p class="mt-3">Unique Souls è un centro estetico giovane e vibrante che incarna l'eleganza e l'innovazione.
-         Creato da giovani visionari, offriamo trattamenti personalizzati e di alta qualità per celebrare la bellezza unica di ogni individuo.</p>
+      <div class="col-12 col-lg-4  descrizione" >
+      <h2 class="text-center">Chi siamo</h2>
+      <p class="mt-3">Unique Souls è un salone moderno, fresco e raffinato, in cui sentirsi a casa, e tra una pennellata di colore e un nuovo trattamento risplendere di personalità.</p>
+	<p class="mt-3">La bellezza e la creatività sono il nostro mestiere, l’inclusione e l’autenticità i nostri valori, far emergere e valorizzare l’unicità che caratterizza ognuno di noi il nostro compito.</p>
+      <p class="mt-3">La passione ci muove nel creare insieme lo stile più adatto a te.</p>
       </div>
      </div>
     </div>  
@@ -85,8 +86,9 @@
      <!-- SEZIONE STAFF --> 
    <section id="staff" class="staffSection ">
       <div class="container">
-    <h2 class="text-center mb-3 fs-1 fw-bold">Il Team</h2>
-    <h3  class="text-center mb-3 text-white mb-5">La nostra forza è il gruppo</h3>
+       <h3  class="text-center mb-3 text-white ">La nostra forza</h3>
+    	<h2 class="text-center mb-3 fs-1 fw-bold">Il Gruppo</h2>
+   
         <div class="row" >
           
           <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5 card-with-overlay" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
@@ -124,8 +126,11 @@
     <section class="sezioneServizi">
       <div class="container mt-5">
         <div class="row text-center">
-
-          <h2 class="mb-5 fs-1 fw-bold text-white">I nostri servizi</h2>
+		   <h4 class="text-white mt-3">Cosa ci contraddistingue?</h4>
+		   <h4 class="text-white mb-3">L’attenzione ai dettagli, alle sfumature, alle nuove tendenze, nonché gli elevati standard qualitativi e dei servizi offerti.</h4>
+          <h2 class=" fs-1 fw-bold text-white">I nostri servizi</h2>
+         
+		  
           <h3 class="fw-bold fs-2 text-white">Hair</h3>
           <div class="linea"></div>
 
