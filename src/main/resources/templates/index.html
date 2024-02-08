@@ -63,10 +63,10 @@
   <section id="gifSalone">
   <div class="container">
   	<div class="row">
-      <div class="box col-12 col-lg-8">
+      <div class="box col-12 col-lg-8 mb-5">
         
         <img class="gif" src="images/salone.gif" style="width:400px;height:350px;">
-        <img class="gif2 mt-3" src="images/salone2.gif" style="width:400px;height:350px;">
+        <img class="gif2 mt-5" src="images/salone2.gif" style="width:400px;height:350px;">
         
       </div>
       
@@ -85,7 +85,7 @@
       <div class="container">
     <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
         <div class="row" >
-          <div id="card" class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
+          <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
             <div class="infoStaff">
               <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
               <h5 th:text="${p.ruolo}"></h5>
@@ -116,12 +116,12 @@
 </section>
 
     <!-- SEZIONE PRESTAZIONI -->
-    <section >
+    <section class="sezioneServizi">
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h2 class="mb-5 fs-1 fw-bold">I nostri servizi</h2>
-          <h3 class="fw-bold fs-2">Hair</h3>
+          <h2 class="mb-5 fs-1 fw-bold text-white">I nostri servizi</h2>
+          <h3 class="fw-bold fs-2 text-white">Hair</h3>
           <div class="linea"></div>
 
 		  <div class="row">
@@ -142,17 +142,15 @@
       
         </div>
       </div>
-    </section>
-
-    <section>
+   
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h3 class="fw-bold fs-2 mt-5">Beauty</h3>
+          <h3 class="fw-bold fs-2 mt-5 text-white">Beauty</h3>
           <div class="linea"></div>
 
 		  <div class="row">
-            <div class="col-lg-4" th:each="p : ${beauty}">
+            <div class="col-lg-4 mb-5" th:each="p : ${beauty}">
 				<div class="card mt-5">
               		<img th:src="${p.foto}" class="card-img-top" alt="...">
               		<div class="card-body">
@@ -177,7 +175,7 @@
 
     <!-- FOOTER -->
     
-     <footer id="contatti" class="footer text-center mt-5">
+     <footer id="contatti" class="footer text-center">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-4 my-4 text-center mx-0">

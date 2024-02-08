@@ -91,14 +91,17 @@ body{
     background-color: #505050;
 }
 /* sezione ultime novità */
-.ultimeNovita{
-    background-color: #2e2e2e;
-}
+
 
 .ultimeNovita h5{
     margin-top: 10px;
     font-size: 25px;
     color: rgb(246, 245, 238);
+}
+
+.sezioneServizi{
+	background-color: #2e2e2e;
+
 }
 
 /* SEZIONE STAFF */
@@ -146,7 +149,7 @@ body{
 .mappa{
     width: 100%;
     min-height: 500px;
-    margin-top: 80px;
+   
     
   }
 
