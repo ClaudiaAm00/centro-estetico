@@ -39,7 +39,7 @@
                 <a class="nav-link" href="#servizi">Servizi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#staff">Staff</a>
+                <a class="nav-link" href="#staff">Team</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#map">Dove siamo</a>
@@ -81,9 +81,10 @@
     </section>
     
      <!-- SEZIONE STAFF --> 
-   <section id="staff" class="staffSection mt-5">
+   <section id="staff" class="staffSection ">
       <div class="container">
-    <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
+    <h2 class="text-center mb-3 fs-1 fw-bold">Il Team</h2>
+    <h3  class="text-center mb-3 text-white">La nostra forza è il gruppo</h3>
         <div class="row" >
           <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
             <div class="infoStaff">
