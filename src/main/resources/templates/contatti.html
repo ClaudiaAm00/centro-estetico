@@ -149,21 +149,37 @@
                     <div class="form-items">
                         <h3>Registrati oggi</h3>
                         <p>Inserisci tutti i dati</p>
-                        <form class="requires-validation" novalidate>
+                        <form class="contatti requires-validation" novalidate action="contatti/aggiungicontatto" method="POST" enctype="multipart/form-data">
 
                             <div class="col-md-12">
-                               <input class="form-control" type="text" name="name" placeholder="Nome e cognome completo" required>
+                               <input class="form-control" type="text" name="nome" placeholder="Inserisci il tuo nome..." required>
                                <div class="valid-feedback">Nome valido!</div>
                                <div class="invalid-feedback">Nome non può essere vuoto!</div>
                             </div>
-
+                            
                             <div class="col-md-12">
-                                <input class="form-control" type="email" name="email" placeholder="E-mail" required>
-                                 <div class="valid-feedback">E-mail valido!</div>
-                                 <div class="invalid-feedback">E-mail non può essere vuoto!</div>
+                               <input class="form-control" type="text" name="cognome" placeholder="Inserisci il tuo cognome..." required>
+                               <div class="valid-feedback">Cognome valido!</div>
+                               <div class="invalid-feedback">Cognome non può essere vuoto!</div>
                             </div>
 
+                            <div class="col-md-12">
+                                <input class="form-control" type="email" name="email" placeholder="example@email.com" required>
+                                 <div class="valid-feedback">E-mail valida!</div>
+                                 <div class="invalid-feedback">E-mail non può essere vuota!</div>
+                            </div>
+                            
+							<div class="col-md-12">
+                               <input class="form-control" type="text" name="telefono" placeholder="1234567890" required>
+                               <div class="valid-feedback">Telefono valido!</div>
+                               <div class="invalid-feedback">Telefono non può essere vuoto!</div>
+                            </div>
                         
+                        	<div class="col-md-12">
+                               <input class="form-control" type="text" name="testo" placeholder="Scrivi qui..." required>
+                               <div class="valid-feedback">Testo valido!</div>
+                               <div class="invalid-feedback">Test non può essere vuoto!</div>
+                            </div>
 
                         
                   
