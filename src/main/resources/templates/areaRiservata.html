@@ -116,14 +116,14 @@
                         </thead>
                         <tbody>
     
-                            <tr th:each="p : ${prestazioni}">
+                            <tr th:each="p : ${contatti}">
                            <!-- 	<td th:src="${p.foto}" class="immagineProfilo"> -->
-                                <td th:text="${p.tipologia}"></td>
-                                <td th:text="${p.descrizione}"></td>
-                                <td th:text="${p.categoria}"></td>
-                                <td th:text="${p.staff.nome} + ' ' + ${p.staff.cognome}"></td>
-                                <td th:text="'€ ' + ${#numbers.formatDecimal(p.prezzo,0,'POINT',2,'COMMA')}"></td>
-                                <td><a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</a></td>
+                                <td th:text="${p.nome}"></td>
+                                <td th:text="${p.cognome}"></td>
+                                <td th:text="${p.email}"></td>
+                                <td th:text="${p.telefono}"></td>
+                                <td th:text="${p.testo}"></td>
+                                <td><a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/areariservata/cancellamssaggio(id=${p.id})}">Elimina</a></td>
                               
                             </tr>
     
