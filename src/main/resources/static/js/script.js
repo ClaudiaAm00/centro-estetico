@@ -1,7 +1,7 @@
 /**
  * 
  */
- function aggiungiOmbra() {
+ /*function aggiungiOmbra() {
     document.addEventListener('DOMContentLoaded', function() {
         // Seleziona tutte le card all'interno del div specifico
         var cards = document.querySelectorAll('[id^="card"]');
@@ -10,19 +10,45 @@
             // Aggiungi un listener per l'evento mouseover a ciascuna card
             card.addEventListener('mouseover', function() {
                 // Applica l'ombra quando il mouse passa sopra alla card
-                card.style.boxShadow = 'inset 0 0 50px 40px rgb(40, 40, 40)';
+                // card.style.boxShadow = 'inset 0 0 50px 40px rgb(40, 40, 40)';
+                card.style.filter = 'brightness(70%)';
             });
             
             // Aggiungi un listener per l'evento mouseout a ciascuna card
             card.addEventListener('mouseout', function() {
                 // Rimuovi l'ombra quando il mouse esce dalla card
-                card.style.boxShadow = 'none';
+                // card.style.boxShadow = 'none';
+                card.style.filter = 'brightness(100%)';
             });
         });
     });
 }
 // Chiama la funzione per aggiungere l'ombra alle card
+aggiungiOmbra();*/
+
+function aggiungiOmbra() {
+    document.addEventListener('DOMContentLoaded', function() {
+        var cards = document.querySelectorAll('.card-with-overlay');
+        
+        cards.forEach(function(card) {
+            var overlay = document.createElement('div'); // Creare l'elemento overlay
+            overlay.classList.add('overlay'); // Aggiungere la classe overlay
+            card.appendChild(overlay); // Aggiungere overlay come figlio della card
+            
+            card.addEventListener('mouseover', function() {
+                overlay.style.opacity = '0.5'; // Opacità dimezzata
+            });
+            
+            card.addEventListener('mouseout', function() {
+                overlay.style.opacity = '0'; // Opacità nulla
+            });
+        });
+    });
+}
+
+// Chiama la funzione per aggiungere l'overlay alle card
 aggiungiOmbra();
+
 
 
 /*CONTROLLO DIMENSIONE FILE IMMAGINE*/ 

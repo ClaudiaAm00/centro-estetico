@@ -88,12 +88,14 @@
     <h2 class="text-center mb-3 fs-1 fw-bold">Il Team</h2>
     <h3  class="text-center mb-3 text-white mb-5">La nostra forza è il gruppo</h3>
         <div class="row" >
-          <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
-            <div class="infoStaff">
-              <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
-              <h5 th:text="${p.ruolo}"></h5>
-            </div> 
-          </div>
+          
+          <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5 card-with-overlay" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
+    <div class="infoStaff">
+        <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
+        <h5 th:text="${p.ruolo}"></h5>
+    </div> 
+</div>
+          
           
       </div> 
      

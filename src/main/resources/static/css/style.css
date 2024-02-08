@@ -509,16 +509,35 @@ color:rgb(246, 245, 238) !important;
 
   
   .formRegistrazioneContatti
-{
+  {
     width: 300px !important;
-}
-
-.desrizione h2{
+   }
+   
+   .desrizione h2{
 	margin:0px 0px !important;
-}
-
-.sezioneContatti h3{
+	}
+	
+	.sezioneContatti h3{
 	margin-top:50px!important;
-}
+	}
 
 }
+
+
+/* PROVA OVERLAY CARD */
+.card-with-overlay {
+    position: relative; /* Assicura che l'overlay sia posizionato rispetto a questa card */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Colore nero */
+    opacity: 0; /* Opacità inizialmente nulla */
+    transition: opacity 0.3s ease; /* Transizione per l'opacità */
+}
+
+
