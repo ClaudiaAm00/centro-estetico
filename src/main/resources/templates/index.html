@@ -60,6 +60,44 @@
     <h1 class="text-center text-white titoloh1">Unique Souls</h1>
     </header>
 
+  <section id="gifSalone">
+  <div class="container">
+  	<div class="row">
+      <div class="box col-12 col-lg-8">
+        
+        <img class="gif" src="images/salone.gif" style="width:400px;height:350px;">
+        <img class="gif2 mt-3" src="images/salone2.gif" style="width:400px;height:350px;">
+        
+      </div>
+      
+      <div class="col-12 col-lg-4 text-center descrizione">
+      <h2>Chi siamo</h2>
+      <p class="mt-3">Unique Souls è un centro estetico giovane e vibrante che incarna l'eleganza e l'innovazione.
+         Creato da giovani visionari, offriamo trattamenti personalizzati e di alta qualità per celebrare la bellezza unica di ogni individuo.</p>
+      </div>
+     </div>
+    </div>  
+      
+    </section>
+    
+     <!-- SEZIONE STAFF --> 
+   <section id="staff" class="staffSection mt-5">
+      <div class="container">
+    <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
+        <div class="row" >
+          <div id="card" class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
+            <div class="infoStaff">
+              <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
+              <h5 th:text="${p.ruolo}"></h5>
+            </div> 
+          </div>
+          
+      </div> 
+     
+      </div>
+        
+    </section>
+
     <!-- SEZIONE ULTIME NOVITA' -->
 <section class="text-center" id="servizi">
 
@@ -129,110 +167,8 @@
         </div>
       </div>
     </section>
-    
-    <!-- SEZIONE CAROSELLO IMMAGINI SALONE -->
-<section class="mt-5">
-  <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner text-center">
-      <div class="carousel-item active">
-        <img src="images/salone3.jpg" class="w-75" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/salone4.jpg" class="w-75" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/salone_zona_lavaggio.jpg" class="w-75" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/Barber.jpg" class="w-75" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/prodottiTinta.jpg" class="w-75" alt="...">
-      </div>
-    </div>
-     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <i class="fa-solid fa-chevron-left fa-2xl text-black"></i>
-      <span aria-hidden="true"></span>
-      <span class="visually-hidden ">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <i class="fa-solid fa-chevron-right fa-2xl text-black"></i>
-      <span  aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
-    
-    <!-- SEZIONE STAFF --> 
-   <section id="staff" class="staffSection mt-5">
-      <div class="container">
-    <h2 class="text-center mb-3 fs-1 fw-bold">Il nostro staff</h2>
-        <div class="row" >
-          <div class="col-12 col-md-4 imgStaff mb-5" th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
-            <div class="infoStaff">
-              <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
-              <h5 th:text="${p.ruolo}"></h5>
-            </div> 
-          </div>
-          
-      </div> 
-     
-      </div>
       
-     <!-- VECCHIO NOSTRO STAFF CON IMMAGINI ALTERNATE 
-     <div class="container">
-        <h2 class="text-center mt-5">Il nostro staff</h2>
-
-        <div class="row no-gutters mt-5">
-          <div class="col-lg-6 order-lg-2 imgStaff" style="background-image: url('/images/fotoStaff2.jpg');">
-          </div>
-
-          <div class="col-lg-6 order-lg-1">
-            <h3 class="text-center">Nome Cognome</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cum culpa expedita in aperiam doloremque, quam placeat neque quia est impedit voluptatibus officiis. Ex rerum corporis dolor numquam impedit laboriosam.</p>
-          </div>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 imgStaff" style="background-image: url('/images/fotoStaff3.jpg');">
-          </div>
-
-          <div class="col-lg-6">
-            <h3 class="text-center">Nome Cognome</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cum culpa expedita in aperiam doloremque, quam placeat neque quia est impedit voluptatibus officiis. Ex rerum corporis dolor numquam impedit laboriosam.</p>
-          </div>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 imgStaff" style="background-image: url('/images/fotoStaff1.jpg');">
-          </div>
-
-          <div class="col-lg-6 order-lg-1">
-            <h3 class="text-center">Nome Cognome</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cum culpa expedita in aperiam doloremque, quam placeat neque quia est impedit voluptatibus officiis. Ex rerum corporis dolor numquam impedit laboriosam.</p>
-          </div>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 imgStaff" style="background-image: url('/images/fotoStaff4.jpg');">
-          </div>
-
-          <div class="col-lg-6">
-            <h3 class="text-center">Nome Cognome</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cum culpa expedita in aperiam doloremque, quam placeat neque quia est impedit voluptatibus officiis. Ex rerum corporis dolor numquam impedit laboriosam.</p>
-          </div>
-        </div>
-
-      </div> --> 
-      
-    </section>
+   
 
     <!-- MAPPA GOOGLE -->
     <section id="map">
@@ -259,20 +195,18 @@
 
           </div>
 
-          <div class="col-12 col-lg-4 my-4">
+          <div class="col-12 col-lg-4 my-2">
             <div>
 
               <div>
                 <img src="images/uniqueSouls.png" class="logo me-3">
               </div>
 
-              <p class="my-4">Unique Souls è un centro estetico giovane e vibrante che incarna l'eleganza e l'innovazione.
-                Creato da giovani visionari, offriamo trattamenti personalizzati e di alta qualità per celebrare la bellezza unica di ogni individuo.</p>
             </div>
 
-            <div class="text-center mt-3">
-              <a href="#"><i class="fa-brands fa-facebook fa-2xl mx-2"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram fa-2xl mx-2"></i></a>
+            <div class="text-center mt-2 me-3">
+              <a href="#"><i class="fa-brands fa-facebook fa-2xl mx-1"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram fa-2xl mx-1"></i></a>
             </div>
           </div>
 
@@ -294,7 +228,7 @@
                 <a href="#">via unique souls 34</a>
             </li>
             <li>
-            <button class="btn btn-primary mt-3">Contattaci</button>
+            <button class="btn btnContatto mt-4">Contattaci</button>
             </li>
             </ul>
           </div>
@@ -310,6 +244,8 @@
     </div>
     </footer>
 
+	<!-- JS CUSTOM -->
+	<script src="js/script.js"></script>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
    
