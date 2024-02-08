@@ -115,12 +115,12 @@ body{
 }
 
 .staffSection .imgStaff{
-    min-height: 25rem; 
-    width: 27rem; 
+    min-height: 20rem;
+    width: 22rem;
     background-size: cover;
     background-position: center;
     margin-top: 50px;
-    margin-left: 5px;
+    margin-left: 60px;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -145,6 +145,7 @@ body{
     text-shadow:5px 5px 10px black !important;
   
 }
+
 
 /* MAPPA GOOGLE */
 .mappa{
@@ -343,7 +344,13 @@ color:rgb(246, 245, 238) !important;
 }
 .formRegistrazioneContatti
 {
-    width: 600px !important;
+    width: 600px !important;  
+}
+.bgForm{
+	 background-color: rgb(40, 40, 40) !important;
+	 color:white;
+	 margin-bottom:50px !important;
+	 
 }
 .ftAreaPersonale2{
     margin-top: 50px;
@@ -415,6 +422,16 @@ color:rgb(246, 245, 238) !important;
 	!important;
 }
 
+.headerPaginaContatti{
+	 background-color: #747474;
+    height: 500px;
+    padding-top: 8rem;
+    padding-bottom: 8rem ;
+    background-image: url('/images/salone_zona_lavaggio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply ;
+}
 
 @media screen and (max-width:990px){
     .logoNavbar{
@@ -482,7 +499,7 @@ color:rgb(246, 245, 238) !important;
   
   .formRegistrazioneContatti
 {
-    width: 350px !important;
+    width: 300px !important;
 }
     
 

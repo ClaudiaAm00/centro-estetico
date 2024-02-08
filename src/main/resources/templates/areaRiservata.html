@@ -91,6 +91,54 @@
         </div>
 </section>
 
+<section class="pagineRiservate">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header gestionePrestazioni text-center">
+                    <i class="fas fa-table me-1"></i>
+                </div>
+                
+                <div class="card-body ">
+                  <div class="table-responsive">
+                    <table  class="table">
+                        <thead>
+                            <tr>
+                                <th>NOME</th>
+                                <th>COGNOME</th>
+                                <th>E-MAIL</th>
+                                <th>TELEFONO</th>
+                                <th>MESSAGGIO</th>
+                                <th></th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                            <tr th:each="p : ${prestazioni}">
+                           <!-- 	<td th:src="${p.foto}" class="immagineProfilo"> -->
+                                <td th:text="${p.tipologia}"></td>
+                                <td th:text="${p.descrizione}"></td>
+                                <td th:text="${p.categoria}"></td>
+                                <td th:text="${p.staff.nome} + ' ' + ${p.staff.cognome}"></td>
+                                <td th:text="'€ ' + ${#numbers.formatDecimal(p.prezzo,0,'POINT',2,'COMMA')}"></td>
+                                <td><a type="button" class="btn btnAreaRiservata mt-3" th:href="@{/gestioneprestazioni/cancellaprestazione(id=${p.id})}">Elimina</a></td>
+                              
+                            </tr>
+    
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+</section>
+
  <footer class="ftAreaPersonale">
           <div class="container">
             <div class="row text-center">

@@ -45,88 +45,14 @@
         </div>
       </nav>
 
-    <!-- Header-->
-  
-
-    <!-- Sezione dei valori dell'azienda - AMBIZIONE -->
-<!-- <section id="scroll">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="Inseriamo un immagine" alt="..." /></div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <h2 class="display-4">Ambizione</h2>
-                        <p>Puntiamo sempre in alto.
-                            Abbiamo grandi progetti. Sfidiamo noi stessi e gli altri per realizzarli. Con coraggio, passione e tenacia, non ci accontentiamo mai.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<header id="header" class="headerPaginaContatti">
     
-    <section>
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="Inseriamo un immagine" alt="..." /></div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-5">
-                        <h2 class="display-4">Collaborazione</h2>
-                        <p>Ci siamo dentro insieme.
-                            Ci supportiamo e ci potenziamo a vicenda, godendoci i momenti lungo il percorso. Insieme, siamo una forza da non sottovalutare.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</header>
 
- 
-    <section>
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="Inseriamo un immagine" alt="..." /></div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <h2 class="display-4">Impatto</h2>
-                        <p>Facciamo la differenza.
-                            Ci concentriamo sulle cose che ottengono risultati. Ognuno di noi ha il potere e la responsabilità di avere un impatto su Unique Souls, sui nostri partner e clienti.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section  class="mt-5">
 
-
-   
-    <section>
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="Inseriamo un immagine" alt="..." /></div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-5">
-                        <h2 class="display-4">Velocità</h2>
-                        <p>Ci muoviamo velocemente.
-                            Analizziamo in modo efficace, prendiamo decisioni rapidamente ed eseguiamo con determinazione. Man mano che progrediamo, impariamo e ci adattiamo continuamente.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->    
-
-    <!--Form oppure Newletter-->
-
-<section  class="sezioneForm pagineRiservate">
-
-  <h3 class="text-center">Contattaci</h3>
-<div class="container ">
+  <h2 class="text-center">Contattaci</h2>
+<div class="container mt-5">
 <div class="row">
 
 <div class="col-12 col-lg-6">
@@ -135,38 +61,38 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos iusto, seq
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos iusto, sequi repellat ab deserunt saepe natus ullam repellendus dolor sunt adipisci alias perferendis perspiciatis repudiandae nesciunt illo odit quas?</p>
 </div>
  
-<div class="col-12 col-lg-6 mt-5">
+<div class="col-12 col-lg-6 mt-5 bgForm">
 	   
   <form class="formRegistrazioneContatti" novalidate action="contatti/aggiungicontatto" method="POST" enctype="multipart/form-data">
 
-     <div class="mb-3">
-          <label class="form-label">Nome</label>
+     <div class="mb-3 mt-3 ms-3">
+          <label class="form-label">Nome*</label>
           <input class="form-control" type="text" name="nome"  required>
                               
      </div>
                             
-     <div class="mb-3">
-          <label class="form-label">Cognome</label>
+     <div class="mb-3 ms-3">
+          <label class="form-label">Cognome*</label>
           <input class="form-control" type="text" name="cognome" required>
   	</div>
 
-   <div class="mb-3">
-         <label class="form-label">Email</label>
+   <div class="mb-3 ms-3">
+         <label class="form-label">Email*</label>
         <input class="form-control" type="email" name="email"  required>                                
           </div>
                   
-    <div class="mb-3">
+    <div class="mb-3 ms-3">
 		<label class="form-label">Telefono</label>
          <input class="form-control" type="text" name="telefono"  required>                              
      </div>
                         
-    <div class="mb-3">
-        <label class="form-label">Messaggio</label>                              
-       <textarea class="mt-3 w-100" name="testo" rows="10"></textarea>
+    <div class="mb-3 ms-3">
+        <label class="form-label">Messaggio*</label>                              
+       <textarea class="mt-3 w-100 form-control" name="testo" rows="10"></textarea>
 	</div>
 
     
-      <button id="submit" type="submit" class="btn btn-primary">Registra richiesta</button>
+      <button id="submit" type="submit" class="btn btnContatto mb-3 ms-3">Registra richiesta</button>
    
 </form>
 </div>
@@ -200,16 +126,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos iusto, seq
           </div>
 
           <div class="col-12 col-lg-4 my-4">
-            <div>
-
-              <div>
-                <img src="images/uniqueSouls.png" class="logo me-3">
-              </div>
-
-              <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique officia sed, architecto sunt nihil? Velit neque porro rem amet, distinctio quam quia quisquam recusandae, temporibus ipsa vitae dolores voluptates!</p>
+            <div>        
+                <img src="images/uniqueSouls.png" class="logo me-3">             
             </div>
 
-            <div class="text-center mt-3">
+            <div class="text-center mt-2 me-3">
               <a href="#"><i class="fa-brands fa-facebook fa-2xl mx-2"></i></a>
               <a href="#"><i class="fa-brands fa-instagram fa-2xl mx-2"></i></a>
             </div>
@@ -232,9 +153,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos iusto, seq
                 <span class="me-1"><i class="fa-solid fa-location-dot mx-1"></i></span>          
                 <a href="#">via unique souls 34</a>
             </li>
-            <li>
-            <button class="btn btn-primary mt-3">Contattaci</button>
-            </li>
+
             </ul>
           </div>
         </div>
