@@ -13,14 +13,16 @@ h1{
 body{
     background-color: rgb(246, 245, 238) !important;
     overflow-x:hidden;
+    margin:0;
+    padding:0;
 }
 
 /* LOGO  */
 .logo{
     max-width: 180px;
     width: 100%;
-
 }
+
 
 .logoNavbar{
     max-width: 120px;
@@ -87,7 +89,7 @@ body{
 .linea{
     display: block;
     height: 3px;
-    width: 53px;
+    width: 1500px;
     margin: 0px 0px 50px 0px;
     background-color: #505050;
 }
@@ -119,8 +121,7 @@ body{
     min-height: 20rem;
     width: 22rem;
     background-size: cover;
-    background-position: center;
-  
+    background-position: center; 
     margin-left: 60px;
     display: flex;
     justify-content: center;
@@ -448,6 +449,7 @@ color:rgb(246, 245, 238) !important;
 	
 
 @media screen and (max-width:990px){
+	
     .logoNavbar{
         padding: 0px 0px !important;
         margin: 0px 0px;
@@ -496,16 +498,16 @@ color:rgb(246, 245, 238) !important;
         margin: 0px 5px;
    }
    .fotoUtente2{
-   padding: 0px 0px !important;
+   		padding: 0px 0px !important;
         margin: 0px 5px;
    }
    
    .box{
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-   padding: 0px 0px !important;
-   margin-bottom:0px !important;
+	    flex-direction: row;
+	   flex-wrap: wrap;
+	   align-items: center;
+	   padding: 0px 0px !important;
+	   margin-bottom:0px !important;
     }
 
   
@@ -518,8 +520,26 @@ color:rgb(246, 245, 238) !important;
 	margin:0px 0px !important;
 	}
 	
+	.descrizione{
+	margin-top: 50px !important;
+	margin-bottom:50px !important;
+	}
+	
 	.sezioneContatti h3{
 	margin-top:50px!important;
+	}
+	
+	.staffSection .imgStaff{
+	width:50rem;
+	}
+	.staffSection{
+	padding: 0px 0px !important;
+        margin: 0px 0px;
+	}
+	
+	.chiSiamo{
+	padding: 0px 0px !important;
+        margin: 0px 0px;
 	}
 
 }

@@ -39,10 +39,10 @@
                 <a class="nav-link " aria-current="page" href="#header">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#servizi">Servizi</a>
+                <a class="nav-link" href="#staff">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#staff">Team</a>
+                <a class="nav-link" href="#servizi">Servizi</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#map">Dove siamo</a>
@@ -63,7 +63,7 @@
     <h1 class="text-center text-white titoloh1">Unique Souls</h1>
     </header>
 
-  <section>
+  <section class="chiSiamo">
   <div class="container">
   	<div class="row">
       <div class="box col-12 col-lg-8 " data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -75,7 +75,7 @@
       
       <div class="col-12 col-lg-4  descrizione" >
       <h2 class="text-center">Chi siamo</h2>
-      &emsp;
+
       <p class="mt-3">Unique Souls è un salone moderno, fresco e raffinato, in cui sentirsi a casa, e tra una pennellata di colore e un nuovo trattamento risplendere di personalità.</p>
 	<p class="mt-3">La bellezza e la creatività sono il nostro mestiere, l’inclusione e l’autenticità i nostri valori, far emergere e valorizzare l’unicità che caratterizza ognuno di noi il nostro compito.</p>
     <!--  <p class="mt-3">E' la passione a muoverci nel creare insieme lo stile più adatto a te.</p> -->
@@ -88,17 +88,19 @@
      <!-- SEZIONE STAFF --> 
    <section id="staff" class="staffSection ">
       <div class="container">
-       <h3  class="text-center mb-3 text-white ">La nostra forza</h3>
-    	<h2 class="text-center mb-3 fs-1 fw-bold">Il Gruppo</h2>
-   
+      
         <div class="row" >
-          
-          <div th:id="${'card' + p.id}" class="col-12 col-md-4 imgStaff mb-5 " th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
-    <div class="infoStaff">
-        <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
-        <h5 th:text="${p.ruolo}"></h5>
-    </div> 
-</div>
+          <div class="col-12">
+	       	<h3  class="text-center mb-3 text-white ">La nostra forza</h3>
+	    	<h2 class="text-center mb-3 fs-1 fw-bold">Il Gruppo</h2>
+   			</div>
+   			
+          <div th:id="${'card' + p.id}" class="col-12 col-lg-4 imgStaff mb-5 " th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
+    		<div class="infoStaff">
+		        <h4 th:text="${p.nome} + ' ' + ${p.cognome}"></h4>
+		        <h5 th:text="${p.ruolo}"></h5>
+    		</div> 
+		</div>
           
           
       </div> 
@@ -128,10 +130,10 @@
     <section class="sezioneServizi">
       <div class="container mt-5">
         <div class="row text-center">
-       	   &emsp;
-		   <h2 class="text-white mt-3">Cosa ci contraddistingue?</h2>
-		   <h4 class="text-white mb-3">L’attenzione ai dettagli, alle sfumature, alle nuove tendenze, nonché gli elevati standard qualitativi.</h4>
-		   &emsp;
+      		<div class="col-12">
+		   <h2 class="text-center text-white mt-3">Cosa ci contraddistingue?</h2>
+		   <h4 class="text-center text-white mb-3">L’attenzione ai dettagli, alle sfumature, alle nuove tendenze, nonché gli elevati standard qualitativi.</h4>
+		 </div>
           <h2 class=" fs-1 fw-bold text-white">I nostri servizi</h2>
          
 		  
@@ -146,7 +148,7 @@
               			<h5 class="card-title fw-bold" th:text="${p.tipologia}"></h5>
 
               			<!-- <p class="card-text" th:text="${p.descrizione}"></p> -->
-              			<a  th:href="@{/dettaglio(id=${p.id})}" th:text="'Dettaglio'" class="btn btnAreaRiservata">Dettagli</a>
+              			<a  th:href="@{/dettaglio(id=${p.id})}" th:text="'Dettaglio'" class="btn btnAreaRiservata"></a>
 
               		</div>
 				</div>
