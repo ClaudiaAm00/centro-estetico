@@ -10,7 +10,7 @@
             // Aggiungi un listener per l'evento mouseover a ciascuna card
             card.addEventListener('mouseover', function() {
                 // Applica l'ombra quando il mouse passa sopra alla card
-                card.style.boxShadow = 'inset 0 0 50px 40px rgb(40, 40, 40)';
+                card.style.boxShadow = 'inset 0 0 50px 40px rgb(40, 40, 40, 0.5)';
                 //card.style.filter = 'brightness(70%)';
             });
             
