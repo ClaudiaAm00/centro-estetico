@@ -66,11 +66,11 @@
  
 <div class="col-12 col-lg-6 mt-5 bgForm">
 	   
-  <form class="formRegistrazioneContatti" novalidate action="contatti/aggiungicontatto" method="POST" enctype="multipart/form-data">
+  <form class="formRegistrazioneContatti"  action="contatti/aggiungicontatto" method="POST" enctype="multipart/form-data">
 
      <div class="mb-3 mt-3 ms-3">
           <label class="form-label">Nome*</label>
-          <input class="form-control" type="text" name="nome"  required>
+          <input class="form-control" type="text" name="nome"  required >
                               
      </div>
                             
@@ -91,7 +91,7 @@
                         
     <div class="mb-3 ms-3">
         <label class="form-label">Messaggio*</label>                              
-       <textarea class="mt-3 w-100 form-control" name="testo" rows="10"></textarea>
+       <textarea class="mt-3 w-100 form-control" name="testo" rows="10" required></textarea>
 	</div>
 
     

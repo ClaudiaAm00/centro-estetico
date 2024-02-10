@@ -29,7 +29,8 @@ public class ContattiController {
 			@RequestParam(name = "cognome") String cognome,
 			@RequestParam(name = "email") String email,
 			@RequestParam(name = "telefono", required = false) String telefono, 
-			@RequestParam(name = "testo") String testo)
+			@RequestParam(name = "testo") String testo
+			)
 	{
 		
 		contatto = new Contatti();
