@@ -142,7 +142,7 @@
 
 		  <div class="row">
             <div class="col-lg-4" th:each="p : ${hair}">
-				<div class="card mt-5">
+				<div class="card mt-3">
               		<img th:src="${p.foto}" class="card-img-top" alt="...">
               		<div class="card-body">
               			<h5 class="card-title fw-bold" th:text="${p.tipologia}"></h5>
@@ -162,12 +162,12 @@
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h3 class="fw-bold fs-2 mt-5 text-white">Beauty</h3>
+          <h3 class="fw-bold fs-2 mt-3 text-white">Beauty</h3>
           <div class="linea"></div>
 
 		  <div class="row">
-            <div class="col-lg-4 mb-5" th:each="p : ${beauty}">
-				<div class="card mt-5">
+            <div class="col-lg-4 mb-3" th:each="p : ${beauty}">
+				<div class="card mt-3">
               		<img th:src="${p.foto}" class="card-img-top" alt="...">
               		<div class="card-body">
               			<h5 class="card-title fw-bold" th:text="${p.tipologia}"></h5>
@@ -242,7 +242,7 @@
                 <a  href="#">via unique souls 34</a>
             </li>
             <li>
-            <a th:href="@{/contatti}">
+            <a th:href="@{/contatti}" target="_blank">
             	<button class="btn btnContatto mt-4 btn-lg">Contattaci</button>
             </a>
             </li>
