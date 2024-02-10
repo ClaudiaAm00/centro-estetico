@@ -63,9 +63,9 @@
 
                <div class="card">
                     <div class="card-body ">
-                      <h5 class="card-title text-center fw-bold" th:text="${prestazione.tipologia}"></h5>
-                      <h5 class="card-text" th:text="${prestazione.descrizione}"></h5>
-                  	  <h5 class="card-text" th:text="'A partire da €' + ${#numbers.formatDecimal(prestazione.prezzo,0,'POINT',2,'COMMA')}"></h5>
+                      <h5 class="card-title text-center fw-bold " th:text="${prestazione.tipologia}"></h5>
+                      <h5 class="card-text mt-4 text-center" th:text="${prestazione.descrizione}"></h5>
+                  	  <h5 class="card-text mt-3 text-center" th:text="'A partire da €' + ${#numbers.formatDecimal(prestazione.prezzo,0,'POINT',2,'COMMA')}"></h5>
                  
                   </div>
                 </div>
