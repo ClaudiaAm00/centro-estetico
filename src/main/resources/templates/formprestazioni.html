@@ -54,15 +54,15 @@
          <form class="formRegistrazione" action="formprestazioni/aggiungiprestazione" method="POST" enctype="multipart/form-data">
            	    <input type="hidden" name="id" th:value="${prestazione.id}">
                 <div class="mb-3">
-                    <label class="form-label">Tipologia</label>
+                    <label class="form-label">Tipologia*</label>
                 <input name="tipologia" th:value="${prestazione.tipologia}" type="text" class="form-control" required> 
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Descrizione</label>
+                    <label class="form-label">Descrizione*</label>
                   <input name="descrizione" th:value="${prestazione.descrizione}" type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Prezzo</label>
+                    <label class="form-label">Prezzo*</label>
                   <input name="prezzo" th:value="${prestazione.prezzo}" type="number" step="any" class="form-control" required>                   
                 </div>
                 
