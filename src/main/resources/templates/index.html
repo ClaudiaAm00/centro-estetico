@@ -91,8 +91,10 @@
       
         <div class="row" >
           <div class="col-12">
+          	&emsp;
 	       	<h3  class="text-center mb-3 text-white ">La nostra forza</h3>
 	    	<h2 class="text-center mb-3 fs-1 fw-bold">Il Gruppo</h2>
+	    	&emsp;
    			</div>
    			
           <div th:id="${'card' + p.id}" class="col-12 col-lg-4 imgStaff mb-5 " th:each="p : ${staff}" th:style="'background-image: url(' + ${p.foto} + ') '">
@@ -111,7 +113,7 @@
 
     <!-- SEZIONE ULTIME NOVITA' -->
 <section class="text-center" id="servizi">
-
+	&emsp;
  <h2 class="mt-3 mb-3" data-aos="fade-left">Le ultime novità</h2>
 
 	  <div id="carouselExampleSlidesOnly" class="carousel slide ultimeNovita" data-bs-ride="carousel" th:if="${not #lists.isEmpty(nuovePrestazioni)}">
@@ -131,13 +133,16 @@
       <div class="container mt-5">
         <div class="row text-center">
       		<div class="col-12">
+      		&emsp;
 		   <h2 class="text-center text-white mt-3">Cosa ci contraddistingue?</h2>
 		   <h4 class="text-center text-white mb-3">L’attenzione ai dettagli, alle sfumature, alle nuove tendenze, nonché gli elevati standard qualitativi.</h4>
 		 </div>
-          <h2 class=" fs-1 fw-bold text-white">I nostri servizi</h2>
+		 &emsp;
+		 &emsp;
+          <h3 class="fs-2 text-white">I nostri servizi</h3>
          
 		  
-          <h3 class="fw-bold fs-2 text-white">Hair</h3>
+          <h2 class="fw-bold fs-1 text-white">Hair</h2>
           <div class="linea"></div>
 
 		  <div class="row">
@@ -162,7 +167,7 @@
       <div class="container mt-5">
         <div class="row text-center">
 
-          <h3 class="fw-bold fs-2 mt-3 text-white">Beauty</h3>
+          <h2 class="fw-bold fs-1 mt-3 text-white">Beauty</h2>
           <div class="linea"></div>
 
 		  <div class="row">
@@ -178,6 +183,8 @@
           	</div>
       
         </div>
+        &emsp;
+        &emsp;
         </div>
       </div>
     </section>
