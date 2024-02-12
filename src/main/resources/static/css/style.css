@@ -405,6 +405,15 @@ color:rgb(246, 245, 238) !important;
 	 
 }
 
+.descrizione p{
+	text-align:justify;
+}
+
+.sezioneInfo{
+	text-align: justify;
+	
+}
+
 /*BOTTONE CONTATTACI */
 .btnContatto{
 	background-color: white !important;
